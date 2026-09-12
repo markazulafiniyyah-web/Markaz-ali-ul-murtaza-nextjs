@@ -52,3 +52,14 @@ npm start
 - A sitemap index with six Hadith sitemaps covering all 50,884 records
 - Donation calculator, clipboard actions, and WhatsApp handoff
 - Responsive navigation and accessible page structure
+
+## Production multilingual setup (Vercel + Neon)
+
+1. Create a Neon PostgreSQL database and set `DATABASE_URL` in Vercel.
+2. Run `npm run db:setup` once to create indexed tables.
+3. Run `npm run db:import` once to import all 50,884 authoritative records.
+4. Deploy to Vercel. Translations are generated on first request using the free Google/MyMemory hybrid and persisted in Neon.
+
+Every Hadith has 30 server-rendered language URLs such as `/ur/hadith/bukhari/1`. Each response includes its translated text, self-canonical metadata, 30 `hreflang` alternates, JSON-LD, Arabic source, and language navigation. The sitemap index exposes 61 child sitemaps covering 1,526,520 multilingual Hadith URLs.
+
+Free translation services can rate-limit large crawls. Failed translations return English temporarily and are marked `noindex` until a later request successfully creates and stores the translation. This avoids indexing duplicate fallback pages.

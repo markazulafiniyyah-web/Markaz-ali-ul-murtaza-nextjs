@@ -1,0 +1,14 @@
+import "server-only";
+import { db } from "./db";
+
+const inflight=new Map<string,Promise<TranslationResult>>();
+export type TranslationResult={text:string;provider:"source"|"google-public"|"mymemory"|"fallback";cached:boolean};
+function chunk(text:string){const parts=text.match(/[^.!?…۔؟\n]+[.!?…۔؟]*/g)||[text];const chunks:string[]=[];let current="";for(const part of parts){if((current+part).length>450){if(current)chunks.push(current);current=part}else current+=part}if(current)chunks.push(current);return chunks}
+async function google(text:string,lang:string){const url=`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${encodeURIComponent(lang)}&dt=t&q=${encodeURIComponent(text)}`;const response=await fetch(url,{signal:AbortSignal.timeout(12000),next:{revalidate:31536000}});if(!response.ok)throw new Error(`Google ${response.status}`);const json=await response.json();const result=(json[0]||[]).map((x:string[])=>x?.[0]||"").join("");if(!result)throw new Error("Empty Google translation");return result}
+async function myMemory(text:string,lang:string){const output:string[]=[];for(const part of chunk(text)){const email=process.env.MYMEMORY_EMAIL?`&de=${encodeURIComponent(process.env.MYMEMORY_EMAIL)}`:"";const url=`https://api.mymemory.translated.net/get?q=${encodeURIComponent(part)}&langpair=${encodeURIComponent(`en|${lang}`)}${email}`;const response=await fetch(url,{signal:AbortSignal.timeout(12000),next:{revalidate:31536000}});if(!response.ok)throw new Error(`MyMemory ${response.status}`);const json=await response.json();const value=json?.responseData?.translatedText;if(!value||/INVALID|NO QUERY|PLEASE TRY AGAIN/i.test(value))throw new Error("Empty MyMemory translation");output.push(value)}return output.join(" ")}
+async function run(id:number,text:string,lang:string):Promise<TranslationResult>{
+ if(lang==="en")return {text,provider:"source",cached:true};
+ if(db){const rows=await db`SELECT translated_text,provider FROM hadith_translations WHERE hadith_id=${id} AND language=${lang} LIMIT 1`;if(rows.length)return {text:rows[0].translated_text,provider:rows[0].provider,cached:true}}
+ try{let provider:"google-public"|"mymemory"="google-public";let translated:string;try{translated=await google(text,lang)}catch{provider="mymemory";translated=await myMemory(text,lang)}if(db)await db`INSERT INTO hadith_translations (hadith_id,language,translated_text,provider) VALUES (${id},${lang},${translated},${provider}) ON CONFLICT (hadith_id,language) DO UPDATE SET translated_text=excluded.translated_text,provider=excluded.provider,updated_at=now()`;return {text:translated,provider,cached:false}}catch{return {text,provider:"fallback",cached:false}}
+}
+export async function getTranslation(id:number,text:string,lang:string){const key=`${id}:${lang}`;if(!inflight.has(key))inflight.set(key,run(id,text,lang).finally(()=>inflight.delete(key)));return inflight.get(key)!}

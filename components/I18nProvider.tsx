@@ -10,9 +10,10 @@ export function I18nProvider({children}:{children:React.ReactNode}){
  const [lang,setLangState]=useState("en");
  useEffect(()=>{
   const url=new URLSearchParams(location.search).get("lang");
+  const pathLang=location.pathname.split("/")[1];
   const saved=localStorage.getItem("ma_lang");
   const browser=navigator.language?.split("-")[0];
-  const initial=[url,saved,browser,"en"].find(x=>x&&I18N[x])||"en";
+  const initial=[I18N[pathLang]?pathLang:null,url,saved,browser,"en"].find(x=>x&&I18N[x])||"en";
   setLangState(initial);
  },[]);
  const setLang=useCallback((code:string)=>{if(!I18N[code])return;setLangState(code);localStorage.setItem("ma_lang",code);const u=new URL(location.href);u.searchParams.set("lang",code);history.replaceState(null,"",u);},[]);

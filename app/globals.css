@@ -626,3 +626,6 @@ html[lang="de"] .btn,html[lang="ru"] .btn,html[lang="fr"] .btn,html[lang="es"] .
 .seo-translation{margin-top:28px;padding:20px;background:var(--bg-alt);border-radius:16px}.seo-translation .tr-lang{margin-bottom:16px}.seo-translation .had-text{color:var(--text);min-height:50px}
 .hadith-prev-next{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--hairline);padding-top:28px;margin-top:32px}.hadith-prev-next a{font-weight:600}
 .hadith-permalink{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--green)}
+.language-versions{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:24px;border-top:1px solid var(--hairline)}
+.language-versions a{font-size:12px;padding:6px 10px;border:1px solid var(--hairline);border-radius:980px;color:var(--text-2)}
+.language-versions a.active{background:var(--green-deep);border-color:var(--green-deep);color:var(--gold)}
