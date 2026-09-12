@@ -52,6 +52,8 @@ npm start
 - A sitemap index with six Hadith sitemaps covering all 50,884 records
 - Donation calculator, clipboard actions, and WhatsApp handoff
 - Responsive navigation and accessible page structure
+- Apple-inspired frosted navigation, pill controls, restrained shadows, spacious cards, and native system typography
+- Locally bundled Amiri Quran for Qur'anic Arabic, Noto Naskh Arabic for Arabic UI, and Noto Nastaliq Urdu for Urdu UI and translations
 
 ## Production multilingual setup (Vercel + Neon)
 

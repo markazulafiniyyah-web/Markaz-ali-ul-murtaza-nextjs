@@ -1,4 +1,9 @@
 import "./globals.css";
+import "@fontsource/amiri-quran/400.css";
+import "@fontsource/noto-naskh-arabic/400.css";
+import "@fontsource/noto-naskh-arabic/700.css";
+import "@fontsource/noto-nastaliq-urdu/400.css";
+import "@fontsource/noto-nastaliq-urdu/700.css";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { I18nProvider } from "@/components/I18nProvider";

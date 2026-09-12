@@ -629,3 +629,59 @@ html[lang="de"] .btn,html[lang="ru"] .btn,html[lang="fr"] .btn,html[lang="es"] .
 .language-versions{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;padding-top:24px;border-top:1px solid var(--hairline)}
 .language-versions a{font-size:12px;padding:6px 10px;border:1px solid var(--hairline);border-radius:980px;color:var(--text-2)}
 .language-versions a.active{background:var(--green-deep);border-color:var(--green-deep);color:var(--gold)}
+
+/* ============================================================
+   Locally bundled Qur'anic typography + Apple-style polish
+   ============================================================ */
+:root{
+  --quran:"Amiri Quran","KFGQPC Uthmanic Script HAFS","Scheherazade New",serif;
+  --arabic-ui:"Noto Naskh Arabic","Geeza Pro",serif;
+  --urdu-ui:"Noto Nastaliq Urdu","Jameel Noori Nastaleeq",serif;
+  --apple-ease:cubic-bezier(.16,1,.3,1);
+}
+::selection{background:rgba(0,113,227,.18)}
+body{background:#fff}
+.nav{box-shadow:0 1px 0 rgba(0,0,0,.02)}
+.nav.scrolled{box-shadow:0 8px 30px rgba(0,0,0,.055)}
+.btn{min-height:44px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);transition:transform .3s var(--apple-ease),box-shadow .3s var(--apple-ease),background .3s}
+.btn-primary{box-shadow:0 5px 16px rgba(0,113,227,.22)}
+.btn-primary:hover{box-shadow:0 9px 24px rgba(0,113,227,.28)}
+.card,.step,.testi,.qari,.book-card,.had-card,.dn-box,.dn-card,.seo-hadith{border:1px solid rgba(0,0,0,.055)}
+.card,.book-card,.qari,.dn-card{transition:transform .45s var(--apple-ease),box-shadow .45s var(--apple-ease)}
+.lang-panel,.bm-drawer{border:1px solid rgba(0,0,0,.07);box-shadow:0 24px 80px rgba(0,0,0,.18)}
+.hero h1,.lib-hero h1,.dn-hero h1{text-wrap:balance}
+.hero-sub,.section-sub,.lib-hero-sub,.dn-hero-sub{text-wrap:pretty}
+
+/* Qur'an and Hadith matn use a dedicated mushaf-style face. */
+.had-ar,.verse-ar,.dn-verse-ar,.dn-had-ar{
+  font-family:var(--quran)!important;
+  font-weight:400!important;
+  font-variant-ligatures:common-ligatures contextual;
+  font-feature-settings:"liga" 1,"calt" 1,"mark" 1,"mkmk" 1;
+  letter-spacing:0!important;
+  word-spacing:.12em;
+}
+.had-ar{line-height:2.45!important}
+.verse-ar,.dn-verse-ar,.dn-had-ar{line-height:2.25!important}
+
+/* Arabic interface remains highly legible Naskh; Quran text stays Amiri Quran. */
+html[lang="ar"] body{font-family:var(--arabic-ui)}
+html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] h4,
+html[lang="ar"] button,html[lang="ar"] input,html[lang="ar"] select,html[lang="ar"] .brand-name{font-family:var(--arabic-ui)}
+html[lang="ar"] p:not(.had-ar):not(.verse-ar):not(.dn-verse-ar):not(.dn-had-ar){line-height:1.95}
+
+/* Authentic Nastaliq for Urdu interface and translated Hadith text. */
+html[lang="ur"] body,[lang="ur"]{font-family:var(--urdu-ui)}
+html[lang="ur"] h1,html[lang="ur"] h2,html[lang="ur"] h3,html[lang="ur"] h4,
+html[lang="ur"] button,html[lang="ur"] input,html[lang="ur"] select,html[lang="ur"] .brand-name{font-family:var(--urdu-ui)}
+html[lang="ur"] body{line-height:2.25}
+html[lang="ur"] p:not(.had-ar):not(.verse-ar):not(.dn-verse-ar):not(.dn-had-ar),
+[lang="ur"].had-text,.seo-english [lang="ur"]{line-height:2.65}
+html[lang="ur"] .nav{--nav-h:64px}
+html[lang="ur"] .nav-inner{padding-block:4px}
+html[lang="ur"] .btn{padding-block:8px}
+
+@media(max-width:620px){
+  .had-ar{font-size:21px!important;line-height:2.35!important}
+  html[lang="ur"] body{font-size:15.5px}
+}
