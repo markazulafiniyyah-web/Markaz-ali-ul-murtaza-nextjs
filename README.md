@@ -42,10 +42,10 @@ npm start
 ## Features
 
 - Native React components and hooks
-- 30-language interface with RTL support
+- 30-language interface for landing and simple pages, with RTL support
 - 17 Hadith books and 50,884 records
 - Search, chapter filters, pagination, bookmarks, display modes, and text sizing
-- Machine translation across all 30 interface languages with Google/MyMemory fallback and local caching (Kashmiri uses the original English fallback where public machine translation is unavailable)
+- Hadith content in Arabic and English, plus Urdu, Russian, and German machine translations with persistent caching
 - Server-rendered canonical pages for all 50,884 Hadith records at `/hadith/[book]/[number]`
 - Arabic and English embedded in every Hadith page for search crawlers
 - Unique metadata, canonical URLs, JSON-LD, breadcrumbs, and previous/next navigation
@@ -60,6 +60,6 @@ npm start
 3. Run `npm run db:import` once to import all 50,884 authoritative records.
 4. Deploy to Vercel. Translations are generated on first request using the free Google/MyMemory hybrid and persisted in Neon.
 
-Every Hadith has 30 server-rendered language URLs such as `/ur/hadith/bukhari/1`. Each response includes its translated text, self-canonical metadata, 30 `hreflang` alternates, JSON-LD, Arabic source, and language navigation. The sitemap index exposes 61 child sitemaps covering 1,526,520 multilingual Hadith URLs.
+Every Hadith has five server-rendered language versions: English, Arabic, Urdu, Russian, and German. Each response includes its localized content, self-canonical metadata, five `hreflang` alternates, JSON-LD, Arabic source, and language navigation. The 30-language selector remains available on landing and other simple pages.
 
 Free translation services can rate-limit large crawls. Failed translations return English temporarily and are marked `noindex` until a later request successfully creates and stores the translation. This avoids indexing duplicate fallback pages.

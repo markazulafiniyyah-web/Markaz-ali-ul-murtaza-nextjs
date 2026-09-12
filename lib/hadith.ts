@@ -36,3 +36,11 @@ export const HADITH_BOOKS: HadithBook[] = [
   { slug:"shahwaliullah40", category:"forties", count:40, english:"Forty Hadith of Shah Waliullah", arabic:"أربعون شاه ولي الله" }
 ];
 export const HADITH_SLUGS = HADITH_BOOKS.map((book) => book.slug);
+
+/** Hadith content languages: Arabic and English sources plus three requested translations. */
+export const HADITH_LANGUAGES = ["en", "ar", "ur", "ru", "de"] as const;
+export const HADITH_TRANSLATION_LANGUAGES = ["en", "ur", "ru", "de"] as const;
+export type HadithLanguage = (typeof HADITH_LANGUAGES)[number];
+export function isHadithLanguage(value: string): value is HadithLanguage {
+  return (HADITH_LANGUAGES as readonly string[]).includes(value);
+}
