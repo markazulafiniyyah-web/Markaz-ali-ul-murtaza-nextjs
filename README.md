@@ -1,6 +1,6 @@
-# Markaz Ali ul Murtaza — Next.js
+# Markaz ul Murtaza — Next.js
 
-A native Next.js 16 App Router application for Markaz Ali ul Murtaza. The project contains no injected legacy pages or static-site source.
+A native Next.js 16 App Router application for Markaz ul Murtaza. The project contains no injected legacy pages or static-site source.
 
 ## Structure
 
@@ -45,6 +45,10 @@ npm start
 - 30-language interface with RTL support
 - 17 Hadith books and 50,884 records
 - Search, chapter filters, pagination, bookmarks, display modes, and text sizing
-- Machine-translation support with local caching
+- Machine translation across all 30 interface languages with Google/MyMemory fallback and local caching (Kashmiri uses the original English fallback where public machine translation is unavailable)
+- Server-rendered canonical pages for all 50,884 Hadith records at `/hadith/[book]/[number]`
+- Arabic and English embedded in every Hadith page for search crawlers
+- Unique metadata, canonical URLs, JSON-LD, breadcrumbs, and previous/next navigation
+- A sitemap index with six Hadith sitemaps covering all 50,884 records
 - Donation calculator, clipboard actions, and WhatsApp handoff
 - Responsive navigation and accessible page structure

@@ -1,5 +1,5 @@
 /* ============================================================
-   Markaz Ali ul Murtaza — Apple-inspired design system
+   Markaz ul Murtaza — Apple-inspired design system
    ============================================================ */
 :root{
   --bg:#ffffff;
@@ -611,3 +611,18 @@ html[lang="de"] .btn,html[lang="ru"] .btn,html[lang="fr"] .btn,html[lang="es"] .
 /* Native React/Next.js components */
 .native-icon{font-size:30px;color:var(--green);line-height:1;margin-bottom:16px}
 .hero-art img{width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* Search-indexable individual Hadith pages */
+.seo-hadith-page{background:var(--bg-alt);padding:calc(var(--nav-h) + 52px) 22px 90px;min-height:100vh}
+.breadcrumbs{max-width:900px;margin:0 auto 22px;display:flex;gap:9px;flex-wrap:wrap;font-size:13px;color:var(--text-3)}
+.breadcrumbs a{color:var(--green)}
+.seo-hadith{max-width:900px;margin:auto;background:#fff;border-radius:var(--radius);padding:clamp(24px,5vw,54px);box-shadow:var(--shadow-soft)}
+.seo-hadith header{padding-bottom:26px;border-bottom:1px solid var(--hairline);margin-bottom:28px}
+.seo-hadith h1{font-size:clamp(30px,5vw,52px)}
+.seo-hadith .book-ar{font-size:21px;margin-top:12px;color:var(--green)}
+.seo-hadith .had-ar{font-size:clamp(21px,3vw,27px);line-height:2.35;margin:26px 0}
+.seo-english{border-top:1px solid var(--hairline);padding-top:25px}
+.seo-english h2{font-size:20px;margin-bottom:12px}.seo-english p{color:var(--text-2);line-height:1.8}
+.seo-translation{margin-top:28px;padding:20px;background:var(--bg-alt);border-radius:16px}.seo-translation .tr-lang{margin-bottom:16px}.seo-translation .had-text{color:var(--text);min-height:50px}
+.hadith-prev-next{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--hairline);padding-top:28px;margin-top:32px}.hadith-prev-next a{font-weight:600}
+.hadith-permalink{display:inline-block;margin-top:16px;font-size:13px;font-weight:600;color:var(--green)}

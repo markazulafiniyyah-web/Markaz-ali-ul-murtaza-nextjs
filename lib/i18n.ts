@@ -1,6 +1,6 @@
 export type Language = { name:string; en:string; flag:string; region:string; rtl:boolean; t:Record<string,string> };
 /* ============================================================
-   Markaz Ali ul Murtaza — i18n dictionary (30 languages)
+   Markaz ul Murtaza — i18n dictionary (30 languages)
    Full translations: English, Arabic, Urdu.
    Core UI translations for all other languages, with graceful
    fallback to English for deep content.
@@ -9,11 +9,11 @@ export const I18N: Record<string, Language> = {
 
 /* ---------------- ENGLISH (full) ---------------- */
 en: { name:"English", en:"English", flag:"🌍", region:"Worldwide", rtl:false, t:{
-  meta_title:"Markaz Ali ul Murtaza — Online Qur'anic Institute | Hifz, Tajweed, Qira'at, Tarjuma & Tafseer",
-  meta_desc:"Markaz Ali ul Murtaza is an online Islamic institute based in Lashari, Okara, Punjab, Pakistan — one-to-one classes in Hifz, Tajweed, Qira'at al-Sab'a & al-Ashra, Tarjuma and Tafseer, taught by certified scholars for students worldwide.",
+  meta_title:"Markaz ul Murtaza — Online Qur'anic Institute | Hifz, Tajweed, Qira'at, Tarjuma & Tafseer",
+  meta_desc:"Markaz ul Murtaza is an online Islamic institute based in Lashari, Okara, Punjab, Pakistan — one-to-one classes in Hifz, Tajweed, Qira'at al-Sab'a & al-Ashra, Tarjuma and Tafseer, taught by certified scholars for students worldwide.",
   nav_programs:"Programs", nav_about:"Why Us", nav_method:"How It Works", nav_faq:"FAQ", nav_contact:"Contact", nav_enroll:"Enroll Now",
   hero_badge:"Online Qur'anic Institute · Lashari, Okara, Pakistan",
-  hero_title:"Markaz Ali ul Murtaza",
+  hero_title:"Markaz ul Murtaza",
   hero_sub:"Learn the Qur'an the way it was revealed. One-to-one online classes in Hifz, Tajweed, Qira'at al-Sab'a & al-Ashra, Tarjuma and Tafseer — taught by certified scholars, for students everywhere.",
   hero_cta1:"Start Free Trial", hero_cta2:"Explore Programs",
   verse_trans:"“And recite the Qur'an with measured recitation.”", verse_ref:"Sūrah al-Muzzammil 73:4",
@@ -34,7 +34,7 @@ en: { name:"English", en:"English", flag:"🌍", region:"Worldwide", rtl:false, 
   nav_hadith:"Hadith Library", lib_kicker:"The Prophetic Traditions", lib_title:"The Hadith Library.", lib_sub:"50,884 hadiths from 17 canonical books — Arabic text with English translation, from the open hadith-json database.", lib_search:"Search within this book…", lib_hadith:"Hadith", lib_narrator:"Narrator", lib_prev:"Previous", lib_next:"Next", lib_back:"All Books", lib_loading:"Loading book…", lib_page:"Page", lib_of:"of", lib_showing:"Showing", lib_to:"to", lib_chapter:"Chapter", lib_all:"All chapters", lib_cat_the9:"The Nine Books", lib_cat_other:"Classical Compilations", lib_cat_forties:"The Forties", lib_books:"books", lib_open:"Read", lib_note:"Original Arabic with English translation",
   hd_langs:"languages", hd_mt_note:"Machine translation — the Arabic remains the authoritative text.", hd_all:"All", hd_search_lib:"Search books…", hd_mode_both:"Arabic + Translation", hd_mode_ar:"Arabic", hd_mode_tr:"Translation", hd_trans_lang:"Translation language", hd_copy:"Copy", hd_share:"Share", hd_bookmark:"Save", hd_bookmarked:"Saved", hd_copied:"Copied to clipboard", hd_link:"Link copied", hd_bmarks:"Bookmarks", hd_no_bmarks:"No saved hadiths yet.", hd_mt_unavailable:"Machine translation not available for this language — showing English.", hd_mt_tag:"machine translation",
   nav_donate:"Donate", dn_kicker:"Sadqah Jariyah", dn_title:"Invest in the Hereafter.", dn_sub:"Your sadaqah keeps Qur'an students learning — every rupee goes to teaching, scholarships and the platform that carries the Word of Allah to 45+ countries.", dn_verse:"“The example of those who spend their wealth in the way of Allah is like a seed that grows seven spikes; in each spike is a hundred grains.”", dn_verse_ref:"Sūrah al-Baqarah 2:261", dn_once:"One-time", dn_monthly:"Monthly", dn_amount:"Choose amount (PKR)", dn_impact:"Your impact", dn_each_month:"— every month, in shaa Allah", dn_bank_title:"Donation details", dn_bank:"Bank / Wallet", dn_acc_name:"Account name", dn_iban_l:"IBAN", dn_copy_all:"Copy all details", dn_copied:"Copied to clipboard", dn_your_name:"Your name (optional)", dn_send:"Send via WhatsApp", dn_where:"Where your sadaqah goes", dn_w_sch:"Student scholarships", dn_w_teach:"Teacher honorariums", dn_w_plat:"Platform & library", dn_w_admin:"Administration", dn_services:"What your donation powers", dn_had:"“Charity does not decrease wealth.”", dn_had_ref:"Sahih Muslim 2588", imp1:"Provides Qur'an study materials for a student", imp2:"Sponsors one student's one-to-one classes for a full month", imp3:"Sponsors a Hifz student and supports a teacher's honorarium for a month", imp4:"Sponsors a full study circle of five students for a month", imp5:"Powers the entire madrasa platform for a month — Sadqah Jariyah on a grand scale",
-  features_kicker:"Why Markaz Ali ul Murtaza", features_title:"Everything you need to learn, perfectly arranged.",
+  features_kicker:"Why Markaz ul Murtaza", features_title:"Everything you need to learn, perfectly arranged.",
   f1_t:"One-to-One Live Classes", f1_d:"Every student studies directly with their own certified teacher — full attention, at your pace.",
   f2_t:"Certified Qaris & Huffaz", f2_d:"Our instructors hold ijazah and degrees from renowned Islamic universities.",
   f3_t:"Flexible, 24/7 Scheduling", f3_d:"Pick class times that fit your life — any timezone, any hour.",
@@ -58,19 +58,19 @@ en: { name:"English", en:"English", flag:"🌍", region:"Worldwide", rtl:false, 
   fq5_q:"Can I earn an ijazah?", fq5_a:"Yes. Students who complete the prescribed standards in Hifz or Qira'at receive ijazah with sanad from qualified scholars.",
   fq6_q:"Which languages are classes taught in?", fq6_a:"Instruction is available in Arabic, English and Urdu, with support in other major languages.",
   cta_title:"Your journey with the Qur'an starts today.", cta_sub:"Three free classes. No commitment. Just begin.", cta_btn:"Start Free Trial",
-  ft_about:"Markaz Ali ul Murtaza is an online Islamic institute based in Lashari, Okara, Punjab, Pakistan — teaching Hifz, Tajweed, Qira'at al-Sab'a & al-Ashra, Tarjuma and Tafseer to students around the world.",
+  ft_about:"Markaz ul Murtaza is an online Islamic institute based in Lashari, Okara, Punjab, Pakistan — teaching Hifz, Tajweed, Qira'at al-Sab'a & al-Ashra, Tarjuma and Tafseer to students around the world.",
   ft_programs:"Programs", ft_links:"Institute", ft_contact:"Contact", ft_addr:"Lashari, Okara, Punjab, Pakistan",
-  ft_rights:"© {year} Markaz Ali ul Murtaza. All rights reserved.",
+  ft_rights:"© {year} Markaz ul Murtaza. All rights reserved.",
   lang_title:"Choose your language", lang_auto:"Suggested for your location", lang_search:"Search languages…"
 }},
 
 /* ---------------- ARABIC (full) ---------------- */
 ar: { name:"العربية", en:"Arabic", flag:"🇸🇦", region:"السعودية · مصر · الخليج", rtl:true, t:{
-  meta_title:"مركز علي المرتضى — معهد قرآني إلكتروني | حفظ، تجويد، قراءات، ترجمة وتفسير",
-  meta_desc:"مركز علي المرتضى معهد إسلامي إلكتروني مقره لشاري، أوكارا، باكستان — دروس فردية في الحفظ والتجويد والقراءات السبع والعشر والترجمة والتفسير على يد علماء مجازين لطلاب العالم.",
+  meta_title:"مركز المرتضى — معهد قرآني إلكتروني | حفظ، تجويد، قراءات، ترجمة وتفسير",
+  meta_desc:"مركز المرتضى معهد إسلامي إلكتروني مقره لشاري، أوكارا، باكستان — دروس فردية في الحفظ والتجويد والقراءات السبع والعشر والترجمة والتفسير على يد علماء مجازين لطلاب العالم.",
   nav_programs:"البرامج", nav_about:"لماذا نحن", nav_method:"كيف تبدأ", nav_faq:"الأسئلة الشائعة", nav_contact:"تواصل معنا", nav_enroll:"سجّل الآن",
   hero_badge:"معهد قرآني إلكتروني · لشاري، أوكارا، باكستان",
-  hero_title:"مركز علي المرتضى",
+  hero_title:"مركز المرتضى",
   hero_sub:"تعلَّم القرآن كما أُنزل. دروس فردية مباشرة في الحفظ والتجويد والقراءات السبع والعشر والترجمة والتفسير — على يد علماء مجازين، لطلاب في كل أنحاء العالم.",
   hero_cta1:"ابدأ التجربة المجانية", hero_cta2:"استكشف البرامج",
   verse_trans:"«ورتل القرآن ترتيلًا»", verse_ref:"سورة المزمل ٧٣: ٤",
@@ -91,7 +91,7 @@ ar: { name:"العربية", en:"Arabic", flag:"🇸🇦", region:"السعود�
   nav_hadith:"مكتبة الحديث", lib_kicker:"السنة النبوية", lib_title:"مكتبة الحديث.", lib_sub:"٥٠٨٨٤ حديثًا من ١٧ كتابًا معتمدًا — النص العربي مع الترجمة الإنجليزية، من قاعدة بيانات حديث المفتوحة.", lib_search:"ابحث داخل هذا الكتاب…", lib_hadith:"حديث", lib_narrator:"الراوي", lib_prev:"السابق", lib_next:"التالي", lib_back:"كل الكتب", lib_loading:"جارٍ تحميل الكتاب…", lib_page:"صفحة", lib_of:"من", lib_showing:"عرض", lib_to:"إلى", lib_chapter:"باب", lib_all:"كل الأبواب", lib_cat_the9:"الكتب التسعة", lib_cat_other:"المصنفات الجامعة", lib_cat_forties:"الأربعينات", lib_books:"كتابًا", lib_open:"اقرأ", lib_note:"النص العربي الأصلي مع الترجمة الإنجليزية",
   hd_langs:"لغة", hd_mt_note:"ترجمة آلية — يبقى النص العربي هو النص المعتمد.", hd_all:"الكل", hd_search_lib:"ابحث عن كتاب…", hd_mode_both:"العربية + الترجمة", hd_mode_ar:"العربية", hd_mode_tr:"الترجمة", hd_trans_lang:"لغة الترجمة", hd_copy:"نسخ", hd_share:"مشاركة", hd_bookmark:"حفظ", hd_bookmarked:"محفوظ", hd_copied:"تم النسخ", hd_link:"تم نسخ الرابط", hd_bmarks:"المحفوظات", hd_no_bmarks:"لا توجد أحاديث محفوظة بعد.", hd_mt_unavailable:"الترجمة الآلية غير متاحة لهذه اللغة — تُعرض الإنجليزية.", hd_mt_tag:"ترجمة آلية",
   nav_donate:"تبرّع", dn_kicker:"صدقة جارية", dn_title:"استثمر للآخرة.", dn_sub:"صدقتك تُبقي طلاب القرآن يتعلمون — كل ريال يذهب للتعليم والمنح والمنصة التي تحمل كلام الله إلى أكثر من ٤٥ دولة.", dn_verse:"«مثل الذين ينفقون أموالهم في سبيل الله كمثل حبة أنبتت سبع سنابل في كل سنبلة مائة حبة»", dn_verse_ref:"سورة البقرة ٢: ٢٦١", dn_once:"مرة واحدة", dn_monthly:"شهريًا", dn_amount:"اختر المبلغ (روبية)", dn_impact:"أثر تبرعك", dn_each_month:"— كل شهر، إن شاء الله", dn_bank_title:"بيانات التبرع", dn_bank:"البنك / المحفظة", dn_acc_name:"اسم الحساب", dn_iban_l:"الآيبان", dn_copy_all:"نسخ كل البيانات", dn_copied:"تم النسخ", dn_your_name:"اسمك (اختياري)", dn_send:"أرسل عبر واتساب", dn_where:"أين تذهب صدقتك", dn_w_sch:"منح الطلاب", dn_w_teach:"مكافآت المعلمين", dn_w_plat:"المنصة والمكتبة", dn_w_admin:"الإدارة", dn_services:"ما الذي يدعمه تبرعك", dn_had:"«الصدقة لا تنقص المال.»", dn_had_ref:"صحيح مسلم ٢٥٨٨", imp1:"يوفر مواد دراسة القرآن لطالب", imp2:"يكفل دروس طالب فردية شهرًا كاملًا", imp3:"يكفل طالب حفظ ويدعم مكافأة معلم شهرًا", imp4:"يكفل حلقة كاملة من خمسة طلاب شهرًا", imp5:"يشغّل منصة المعهد بأكملها شهرًا — صدقة جارية على نطاق واسع",
-  features_kicker:"لماذا مركز علي المرتضى", features_title:"كل ما تحتاجه للتعلم، في مكان واحد.",
+  features_kicker:"لماذا مركز المرتضى", features_title:"كل ما تحتاجه للتعلم، في مكان واحد.",
   f1_t:"دروس فردية مباشرة", f1_d:"كل طالب يدرس مباشرة مع معلمه المجاز — اهتمام كامل ووتيرتك الخاصة.",
   f2_t:"قُرّاء وحفّاظ مجازون", f2_d:"يحمل معلمونا الإجازات والشهادات من أعرق الجامعات الإسلامية.",
   f3_t:"جدولة مرنة على مدار الساعة", f3_d:"اختر مواعيد تناسب حياتك — في أي منطقة زمنية وأي ساعة.",
@@ -115,19 +115,19 @@ ar: { name:"العربية", en:"Arabic", flag:"🇸🇦", region:"السعود�
   fq5_q:"هل يمكنني الحصول على إجازة؟", fq5_a:"نعم، يُمنح الطالب الذي يستوفي متطلبات الحفظ أو القراءات إجازة بسند من علماء مجازين.",
   fq6_q:"بأي اللغات تُقدَّم الدروس؟", fq6_a:"التدريس متاح بالعربية والإنجليزية والأردية، مع دعم بلغات رئيسية أخرى.",
   cta_title:"رحلتك مع القرآن تبدأ اليوم.", cta_sub:"ثلاثة دروس مجانية. بلا التزام. ابدأ فحسب.", cta_btn:"ابدأ التجربة المجانية",
-  ft_about:"مركز علي المرتضى معهد إسلامي إلكتروني مقره لشاري، أوكارا، باكستان — يعلّم الحفظ والتجويد والقراءات السبع والعشر والترجمة والتفسير لطلاب حول العالم.",
+  ft_about:"مركز المرتضى معهد إسلامي إلكتروني مقره لشاري، أوكارا، باكستان — يعلّم الحفظ والتجويد والقراءات السبع والعشر والترجمة والتفسير لطلاب حول العالم.",
   ft_programs:"البرامج", ft_links:"المعهد", ft_contact:"تواصل معنا", ft_addr:"لشاري، أوكارا، البنجاب، باكستان",
-  ft_rights:"© {year} مركز علي المرتضى. جميع الحقوق محفوظة.",
+  ft_rights:"© {year} مركز المرتضى. جميع الحقوق محفوظة.",
   lang_title:"اختر لغتك", lang_auto:"مقترحة حسب موقعك", lang_search:"ابحث عن لغة…"
 }},
 
 /* ---------------- URDU (full) ---------------- */
 ur: { name:"اردو", en:"Urdu", flag:"🇵🇰", region:"پاکستان", rtl:true, t:{
-  meta_title:"مرکز علی المرتضیٰ — آن لائن قرآنی ادارہ | حفظ، تجوید، قراءات، ترجمہ و تفسیر",
-  meta_desc:"مرکز علی المرتضیٰ لشاری، اوکاڑہ، پنجاب، پاکستان میں قائم آن لائن اسلامی ادارہ ہے — حفظ، تجوید، قراءاتِ سبعہ و عشرہ، ترجمہ اور تفسیر کے ون آن ون آن لائن اسباق، سند یافتہ اساتذہ کے ساتھ۔",
+  meta_title:"مرکز المرتضیٰ — آن لائن قرآنی ادارہ | حفظ، تجوید، قراءات، ترجمہ و تفسیر",
+  meta_desc:"مرکز المرتضیٰ لشاری، اوکاڑہ، پنجاب، پاکستان میں قائم آن لائن اسلامی ادارہ ہے — حفظ، تجوید، قراءاتِ سبعہ و عشرہ، ترجمہ اور تفسیر کے ون آن ون آن لائن اسباق، سند یافتہ اساتذہ کے ساتھ۔",
   nav_programs:"پروگرام", nav_about:"ہم کیوں", nav_method:"طریقۂ کار", nav_faq:"سوالات", nav_contact:"رابطہ", nav_enroll:"داخلہ لیں",
   hero_badge:"آن لائن قرآنی ادارہ · لشاری، اوکاڑہ، پنجاب، پاکستان",
-  hero_title:"مرکز علی المرتضیٰ",
+  hero_title:"مرکز المرتضیٰ",
   hero_sub:"قرآن سیکھیں اسی طرح جس طرح وہ نازل ہوا۔ حفظ، تجوید، قراءاتِ سبعہ و عشرہ، ترجمہ اور تفسیر کے ون آن ون آن لائن اسباق — سند یافتہ اساتذہ کے ساتھ، دنیا بھر کے طلبہ کے لیے۔",
   hero_cta1:"مفت ٹرائل شروع کریں", hero_cta2:"پروگرام دیکھیں",
   verse_trans:"«اور قرآن کو ٹھہر ٹھہر کر پڑھو۔»", verse_ref:"سورۂ المزمل ۷۳:۴",
@@ -148,7 +148,7 @@ ur: { name:"اردو", en:"Urdu", flag:"🇵🇰", region:"پاکستان", rtl:
   nav_hadith:"حدیث لائبریری", lib_kicker:"سنتِ نبویؐ", lib_title:"حدیث لائبریری۔", lib_sub:"١٧ مستند کتابوں کی ٥٠٬٨٤ احادیث — عربی متن مع انگریزی ترجمہ، حدیث-جے ایس او این کے مفت ڈیٹابیس سے۔", lib_search:"اس کتاب میں تلاش کریں…", lib_hadith:"حدیث", lib_narrator:"راوی", lib_prev:"پچھلا", lib_next:"اگلا", lib_back:"تمام کتابیں", lib_loading:"کتاب لوڈ ہو رہی ہے…", lib_page:"صفحہ", lib_of:"از", lib_showing:"دکھائے جا رہے ہیں", lib_to:"تا", lib_chapter:"باب", lib_all:"تمام ابواب", lib_cat_the9:"نو مستند کتابیں", lib_cat_other:"جامع تصانیف", lib_cat_forties:"چہل حدیث", lib_books:"کتابیں", lib_open:"پڑھیں", lib_note:"اصل عربی متن مع انگریزی ترجمہ",
   hd_langs:"زبانیں", hd_mt_note:"مشینی ترجمہ — عربی متن ہی معتبر ہے۔", hd_all:"تمام", hd_search_lib:"کتاب تلاش کریں…", hd_mode_both:"عربی + ترجمہ", hd_mode_ar:"عربی", hd_mode_tr:"ترجمہ", hd_trans_lang:"ترجمہ کی زبان", hd_copy:"کاپی", hd_share:"شیئر", hd_bookmark:"محفوظ کریں", hd_bookmarked:"محفوظ شدہ", hd_copied:"کاپی ہو گیا", hd_link:"لنک کاپی ہو گیا", hd_bmarks:"محفوظات", hd_no_bmarks:"ابھی کوئی حدیث محفوظ نہیں۔", hd_mt_unavailable:"اس زبان کے لیے مشینی ترجمہ دستیاب نہیں — انگریزی دکھائی جا رہی ہے۔", hd_mt_tag:"مشینی ترجمہ",
   nav_donate:"عطیہ", dn_kicker:"صدقہ جاریہ", dn_title:"آخرت کے لیے سرمایہ لگائیں۔", dn_sub:"آپ کا صدقہ قرآن کے طلبہ کو سیکھتا رکھتا ہے — ہر روپیہ تعلیم، وظائف اور اس پلیٹ فارم پر لگتا ہے جو کلامِ اللہ کو ٤٥+ ممالک تک پہنچاتا ہے۔", dn_verse:"«اللہ کی راہ میں اپنا مال خرچ کرنے والوں کی مثال اس دانے جیسی ہے جس سے سات بالیں اگیں، ہر بال میں سو دانے۔»", dn_verse_ref:"سورۂ بقرہ ۲:۲۶۱", dn_once:"یکمشت", dn_monthly:"ماہانہ", dn_amount:"رقم منتخب کریں (PKR)", dn_impact:"آپ کا اثر", dn_each_month:"— ہر ماہ، ان شاء اللہ", dn_bank_title:"عطیہ کی تفصیلات", dn_bank:"بینک / والٹ", dn_acc_name:"اکاؤنٹ کا نام", dn_iban_l:"آئی بان", dn_copy_all:"تمام تفصیلات کاپی کریں", dn_copied:"کاپی ہو گیا", dn_your_name:"آپ کا نام (اختیاری)", dn_send:"واٹس ایپ پر بھیجیں", dn_where:"آپ کا صدقہ کہاں لگتا ہے", dn_w_sch:"طلبہ کے وظائف", dn_w_teach:"اساتذہ کے اعزازیے", dn_w_plat:"پلیٹ فارم و لائبریری", dn_w_admin:"انتظامیہ", dn_services:"آپ کا عطیہ کیا فروغ دیتا ہے", dn_had:"«صدقہ مال کو کم نہیں کرتا۔»", dn_had_ref:"صحیح مسلم ۲۵۸۸", imp1:"ایک طالب علم کے لیے قرآنی مطالعاتی مواد", imp2:"ایک طالب علم کے ون آن ون اسباق کا پورا مہینہ", imp3:"ایک حافظ طالب علم کی کفالت + استاد کے اعزازیے میں معاونت", imp4:"پانچ طلبہ کے پورے حلقے کی ایک ماہ کی کفالت", imp5:"پورے ادارے کا پلیٹ فارم ایک مہینہ — وسیع پیمانے پر صدقہ جاریہ",
-  features_kicker:"مرکز علی المرتضیٰ ہی کیوں", features_title:"سیکھنے کے لیے درکار ہر کچھ، ایک جگہ۔",
+  features_kicker:"مرکز المرتضیٰ ہی کیوں", features_title:"سیکھنے کے لیے درکار ہر کچھ، ایک جگہ۔",
   f1_t:"ون آن ون لائیو کلاسز", f1_d:"ہر طالب علم براہِ راست اپنے سند یافتہ استاد کے ساتھ پڑھتا ہے — مکمل توجہ، اپنی رفتار۔",
   f2_t:"سند یافتہ قاری اور حفاظ", f2_d:"ہمارے اساتذہ کے پاس اجازت اور معروف اسلامی جامعات کی ڈگریاں ہیں۔",
   f3_t:"چوبیس گھنٹے لچکدار اوقات", f3_d:"اپنی زندگی کے مطابق کلاس کا وقت چنیں — کوئی بھی ٹائم زون، کوئی بھی پہر۔",
@@ -172,9 +172,9 @@ ur: { name:"اردو", en:"Urdu", flag:"🇵🇰", region:"پاکستان", rtl:
   fq5_q:"کیا مجھے اجازت مل سکتی ہے؟", fq5_a:"جی ہاں، حفظ یا قراءات کی مقررہ شرائط پوری کرنے والے طلبہ کو سند یافتہ علماء سے اجازت دی جاتی ہے۔",
   fq6_q:"کلاسیں کن زبانوں میں ہوتی ہیں؟", fq6_a:"عربی، انگریزی اور اردو میں تدریس دستیاب ہے، دیگر بڑی زبانوں میں بھی معاونت فراہم کی جاتی ہے۔",
   cta_title:"قرآن کے ساتھ آپ کا سفر آج شروع ہوتا ہے۔", cta_sub:"تین مفت کلاسیں۔ کوئی پابندی نہیں۔ بس آغاز کریں۔", cta_btn:"مفت ٹرائل شروع کریں",
-  ft_about:"مرکز علی المرتضیٰ لشاری، اوکاڑہ، پنجاب، پاکستان میں قائم ایک آن لائن اسلامی ادارہ ہے — جو دنیا بھر کے طلبہ کو حفظ، تجوید، قراءاتِ سبعہ و عشرہ، ترجمہ اور تفسیر کی تعلیم دیتا ہے۔",
+  ft_about:"مرکز المرتضیٰ لشاری، اوکاڑہ، پنجاب، پاکستان میں قائم ایک آن لائن اسلامی ادارہ ہے — جو دنیا بھر کے طلبہ کو حفظ، تجوید، قراءاتِ سبعہ و عشرہ، ترجمہ اور تفسیر کی تعلیم دیتا ہے۔",
   ft_programs:"پروگرام", ft_links:"ادارہ", ft_contact:"رابطہ", ft_addr:"لشاری، اوکاڑہ، پنجاب، پاکستان",
-  ft_rights:"© {year} مرکز علی المرتضیٰ۔ جملہ حقوق محفوظ ہیں۔",
+  ft_rights:"© {year} مرکز المرتضیٰ۔ جملہ حقوق محفوظ ہیں۔",
   lang_title:"اپنی زبان منتخب کریں", lang_auto:"آپ کے مقام کے لیے تجویز کردہ", lang_search:"زبان تلاش کریں…"
 }},
 
@@ -182,7 +182,7 @@ ur: { name:"اردو", en:"Urdu", flag:"🇵🇰", region:"پاکستان", rtl:
 
 fa: { name:"فارسی", en:"Persian", flag:"🇮🇷", region:"ایران · افغانستان", rtl:true, t:{
   nav_programs:"برنامه‌ها", nav_about:"درباره ما", nav_method:"نحوه شروع", nav_faq:"پرسش‌ها", nav_contact:"تماس", nav_enroll:"ثبت‌نام",
-  hero_title:"مرکز العافنیه",
+  hero_title:"مرکز المرتضیٰ",
   hero_sub:"قرآن را با اساتید دارای اجازه بیاموزید — حفظ، تجوید، قرائات سبعه و عشره، ترجمه و تفسیر؛ کلاس‌های آنلاین خصوصی برای زبان‌آموزان سراسر جهان.",
   hero_cta1:"آزمایش رایگان", hero_cta2:"مشاهده برنامه‌ها",
   programs_title:"آموزش کامل قرآنی.", features_title:"هر آنچه برای یادگیری لازم دارید.", faq_title:"پاسخ به پرسش‌های شما.",
@@ -191,7 +191,7 @@ fa: { name:"فارسی", en:"Persian", flag:"🇮🇷", region:"ایران · ا
 }},
 ps: { name:"پښتو", en:"Pashto", flag:"🇦🇫", region:"افغانستان · پاکستان", rtl:true, t:{
   nav_programs:"پروګرامونه", nav_about:"زموږ په اړه", nav_method:"د پیل لاره", nav_faq:"پوښتنې", nav_contact:"اړیکه", nav_enroll:"نوم لیکنه",
-  hero_title:"مرکز العافنیه",
+  hero_title:"مرکز المرتضیٰ",
   hero_sub:"قرآن کریم د اجازت لرونکو ښوونکو سره زده کړئ — حفظ، تجوید، قراءاتِ سبعه او عشره، ترجمه او تفسیر. د نړۍ د زده‌کوونکو لپاره آنلاین یو په یو درسونه.",
   hero_cta1:"وړیا ازموینه", hero_cta2:"پروګرامونه وګورئ",
   programs_title:"بشپړه قرآني زده‌کړه.", features_title:"د زده‌کړې لپاره هر څه، په یو ځای کې.", faq_title:"ستاسو د پوښتنو ځوابونه.",
@@ -200,7 +200,7 @@ ps: { name:"پښتو", en:"Pashto", flag:"🇦🇫", region:"افغانستان 
 }},
 sd: { name:"سنڌي", en:"Sindhi", flag:"🇵🇰", region:"سنڌ", rtl:true, t:{
   nav_programs:"پروگرام", nav_about:"اسان بابت", nav_method:"شروع ڪيئن ڪجي", nav_faq:"سوال", nav_contact:"رابطو", nav_enroll:"داخلا",
-  hero_title:"مرکز العافنيه",
+  hero_title:"مرکز المرتضیٰ",
   hero_sub:"قرآن مجيد سند يافته استادن سان سکو — حفظ، تجويد، قراءتِ سبعه ۽ عشره، ترجمو ۽ تفسير. سڄي دنيا جي شاگردن لاءِ آن لائين ون آن ون ڪلاس.",
   hero_cta1:"مفت ٽرائل", hero_cta2:"پروگرام ڏسو",
   programs_title:"مڪمل قرآني تعليم.", features_title:"سکيا لاءِ گهربل سڀ ڪجهه.", faq_title:"توهان جي سوالن جا جواب.",
@@ -209,7 +209,7 @@ sd: { name:"سنڌي", en:"Sindhi", flag:"🇵🇰", region:"سنڌ", rtl:true, 
 }},
 ks: { name:"کٲشُر", en:"Kashmiri", flag:"🏔️", region:"کشمیر", rtl:true, t:{
   nav_programs:"پروگرام", nav_about:"اسانژ متعلق", nav_method:"طریقہٕ", nav_faq:"سوالات", nav_contact:"رابطہٕ", nav_enroll:"داخلہٕ",
-  hero_title:"مرکز علی المرتضیٰ",
+  hero_title:"مرکز المرتضیٰ",
   hero_sub:"قرآن شریف تصدیق شدہ اُستادن منز پڑھیو — حفظ، تجوید، قراءتِ سبعہ تہٕ عشرہ، ترجمہٕ تہٕ تفسیر. دنیاہس مَنٛز شاگردن خٲطرٕ آن لائن ون آن ون کلاس.",
   hero_cta1:"مفت ٹرائل", hero_cta2:"پروگرام وُچھو",
   programs_title:"مکمل قرآنی تٲلیٖم.", features_title:"سیکھنہٕ خٲطرٕ تمام کیہہ.", faq_title:"توہندین سوالن جواب.",
@@ -227,7 +227,7 @@ pa: { name:"ਪੰਜਾਬੀ", en:"Punjabi", flag:"🇵🇰", region:"پنجا
 }},
 tr: { name:"Türkçe", en:"Turkish", flag:"🇹🇷", region:"Türkiye", rtl:false, t:{
   nav_programs:"Programlar", nav_about:"Hakkımızda", nav_method:"Nasıl Başlanır", nav_faq:"SSS", nav_contact:"İletişim", nav_enroll:"Kayıt Ol",
-  hero_title:"Markaz Ali ul Murtaza",
+  hero_title:"Markaz ul Murtaza",
   hero_sub:"Sertifikalı hocalarla Kur'an öğrenin — Hıfz, Tecvid, Kıraat-ı Seb'a ve Aşere, tercüme ve tefsir. Dünyanın her yerinden öğrenciler için bire bir online dersler.",
   hero_cta1:"Ücretsiz deneme", hero_cta2:"Programları keşfet",
   programs_title:"Eksiksiz bir Kur'an eğitimi.", features_title:"Öğrenmek için ihtiyacınız olan her şey.", faq_title:"Sorularınızın cevapları.",
@@ -380,7 +380,7 @@ ru: { name:"Русский", en:"Russian", flag:"🇷🇺", region:"Россия
 }},
 zh: { name:"中文", en:"Chinese", flag:"🇨🇳", region:"中国", rtl:false, t:{
   nav_programs:"课程", nav_about:"关于我们", nav_method:"如何开始", nav_faq:"常见问题", nav_contact:"联系我们", nav_enroll:"报名",
-  hero_title:"Markaz Ali ul Murtaza 古兰经学院",
+  hero_title:"Markaz ul Murtaza 古兰经学院",
   hero_sub:"跟随持证教师学习《古兰经》——背记（Hifz）、泰吉威德（Tajweed）、七诵与十诵（Qira'at）、翻译与经注。面向全球学生的一对一在线课程。",
   hero_cta1:"免费试听", hero_cta2:"浏览课程",
   programs_title:"完整的古兰经教育。", features_title:"学习所需，一应俱全。", faq_title:"为您解答疑问。",
