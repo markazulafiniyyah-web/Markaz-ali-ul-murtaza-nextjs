@@ -15,7 +15,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       </div>
     </div>
     <div className="hero-art reveal">
-      <svg viewBox="0 0 1200 560" role="img" aria-label="Al-Qur'an al-Karim — Hifz, Tajweed, Qira'at, Tafseer">
+      <svg viewBox="0 0 1200 560" role="img" aria-label="Al-Qur'an al-Karim — Hifz, Nazra and Tajweed">
         <defs>
           <linearGradient id="hAbg" x1={0} y1={0} x2={1} y2={1}><stop offset={0} stopColor="#01411C" /><stop offset=".55" stopColor="#0B6E4F" /><stop offset={1} stopColor="#0E7C86" /></linearGradient>
           <linearGradient id="hAgold" x1={0} y1={0} x2={0} y2={1}><stop offset={0} stopColor="#F9E9B9" /><stop offset=".5" stopColor="#F0C75E" /><stop offset={1} stopColor="#D9A62E" /></linearGradient>
@@ -28,7 +28,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <path d="M1030 108a72 72 0 1 0 40 133 80 80 0 1 1-40-133z" fill="url(#hAgold)" opacity=".92" />
         <circle cx={1082} cy={132} r={11} fill="#F0C75E" />
         <text x={600} y={272} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={118} fontWeight={700} fill="url(#hAgold)">الْقُرْآنُ الْكَرِيمُ</text>
-        <text x={600} y={356} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={30} fill="#fff" opacity=".88">حِفْظٌ · تَجْوِيدٌ · قِرَاءَاتٌ · تَفْسِيرٌ</text>
+        <text x={600} y={356} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={30} fill="#fff" opacity=".88">حِفْظٌ · نَاظِرَةٌ · تَجْوِيدٌ</text>
         <g><circle cx={510} cy={440} r={11} fill="#F0C75E" /><circle cx={570} cy={440} r={11} fill="#34D399" /><circle cx={630} cy={440} r={11} fill="#F472B6" /><circle cx={690} cy={440} r={11} fill="#FB923C" /></g>
       </svg>
     </div>
@@ -114,57 +114,22 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <a href="#enroll" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
-        <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Qira'at al-Sab'a and al-Ashra">
+        <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Nazra Qur'an — fluent recitation">
           <defs>
-            <linearGradient id="gQ" x1={0} y1={0} x2={1} y2={1}><stop offset={0} stopColor="#1E3A8A" /><stop offset={1} stopColor="#0EA5E9" /></linearGradient>
-            <pattern id="pQ" width={80} height={80} patternUnits="userSpaceOnUse"><path d="M40 8l8 24 24 8-24 8-8 24-8-24-24-8 24-8z" fill="none" stroke="#fff" strokeOpacity=".12" /></pattern>
+            <linearGradient id="gN" x1={0} y1={0} x2={1} y2={1}><stop offset={0} stopColor="#1E3A8A" /><stop offset={1} stopColor="#0E7490" /></linearGradient>
+            <pattern id="pN" width={80} height={80} patternUnits="userSpaceOnUse"><path d="M40 8l8 24 24 8-24 8-8 24-8-24-24-8 24-8z" fill="none" stroke="#fff" strokeOpacity=".12" /></pattern>
           </defs>
-          <rect width={800} height={600} rx={24} fill="url(#gQ)" /><rect width={800} height={600} rx={24} fill="url(#pQ)" />
-          <text x={400} y={120} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={58} fontWeight={700} fill="#FDE68A">القِرَاءَاتُ السَّبْعُ وَالْعَشْرُ</text>
-          <g fill="none" strokeLinecap="round" strokeWidth={6} opacity=".95">
-            <path d="M330 330a70 70 0 0 1 140 0" stroke="#F0C75E" />
-            <path d="M300 330a100 100 0 0 1 200 0" stroke="#34D399" />
-            <path d="M270 330a130 130 0 0 1 260 0" stroke="#F472B6" />
-            <path d="M240 330a160 160 0 0 1 320 0" stroke="#A78BFA" />
+          <rect width={800} height={600} rx={24} fill="url(#gN)" /><rect width={800} height={600} rx={24} fill="url(#pN)" />
+          <text x={400} y={142} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={68} fontWeight={700} fill="#FDE68A">نَاظِرَةُ الْقُرْآنِ</text>
+          <g transform="translate(400,370)">
+            <path d="M-185,-52 C-100,-82 -28,-82 0,-58 L0,78 C-28,52 -100,52 -185,86 Z" fill="#FFF7E6" />
+            <path d="M185,-52 C100,-82 28,-82 0,-58 L0,78 C28,52 100,52 185,86 Z" fill="#FBEFD4" />
+            <path d="M0,-58 L0,78" stroke="#D9A62E" strokeWidth={5} />
+            <g stroke="#CBB27E" strokeWidth={4} strokeLinecap="round"><path d="M-154,-24 C-94,-44 -43,-44 -20,-32" /><path d="M-154,2 C-94,-18 -43,-18 -20,-6" /><path d="M-154,28 C-94,8 -43,8 -20,20" /><path d="M154,-24 C94,-44 43,-44 20,-32" /><path d="M154,2 C94,-18 43,-18 20,-6" /><path d="M154,28 C94,8 43,8 20,20" /></g>
           </g>
-          <path d="M310 480 V340 Q310 250 400 232 Q490 250 490 340 V480" fill="none" stroke="#F0C75E" strokeWidth={7} />
-          <g fill="#F0C75E"><circle cx={220} cy={180} r={8} /><circle cx={280} cy={160} r={8} /><circle cx={340} cy={148} r={8} /><circle cx={400} cy={144} r={8} /><circle cx={460} cy={148} r={8} /><circle cx={520} cy={160} r={8} /><circle cx={580} cy={180} r={8} /></g>
-          <g fill="#22D3EE"><circle cx={340} cy={520} r={7} /><circle cx={400} cy={528} r={7} /><circle cx={460} cy={520} r={7} /></g>
-          <rect x={30} y={524} width={330} height={48} rx={24} fill="#fff" opacity=".94" />
-          <text x={195} y={556} textAnchor="middle" fontFamily="-apple-system,'Segoe UI',Arial,sans-serif" fontSize={24} fontWeight={600} fill="#1E3A8A">Qira'at al-Sab'a &amp; al-Ashra</text>
-        </svg>
-      </div>
-    </div>
-    <div className="feature-row flip reveal">
-      <div className="feature-copy">
-        <h3 data-i18n="p4_title">{t("p4_title")}</h3>
-        <p data-i18n="p4_desc">{t("p4_desc")}</p>
-        <ul className="checks">
-          <li data-i18n="p4_b1">{t("p4_b1")}</li>
-          <li data-i18n="p4_b2">{t("p4_b2")}</li>
-          <li data-i18n="p4_b3">{t("p4_b3")}</li>
-        </ul>
-        <a href="#enroll" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
-      </div>
-      <div className="feature-media">
-        <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Tarjuma and Tafseer">
-          <defs>
-            <linearGradient id="gF" x1={0} y1={0} x2={1} y2={1}><stop offset={0} stopColor="#EA580C" /><stop offset={1} stopColor="#BE185D" /></linearGradient>
-            <pattern id="pF" width={80} height={80} patternUnits="userSpaceOnUse"><path d="M40 8l8 24 24 8-24 8-8 24-8-24-24-8 24-8z" fill="none" stroke="#fff" strokeOpacity=".12" /></pattern>
-          </defs>
-          <rect width={800} height={600} rx={24} fill="url(#gF)" /><rect width={800} height={600} rx={24} fill="url(#pF)" />
-          <text x={400} y={140} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={62} fontWeight={700} fill="#FDE68A">التَّفْسِيرُ وَالتَّرْجُمَةُ</text>
-          <g transform="translate(400,390)">
-            <path d="M-150,-35 C-80,-62 -20,-62 0,-44 L0,60 C-20,42 -80,42 -150,66 Z" fill="#FFF7E6" />
-            <path d="M150,-35 C80,-62 20,-62 0,-44 L0,60 C20,42 80,42 150,66 Z" fill="#FBEFD4" />
-            <path d="M0,-44 L0,60" stroke="#D9A62E" strokeWidth={5} />
-            <g stroke="#CBB27E" strokeWidth={4} strokeLinecap="round"><path d="M-125,-12 C-75,-30 -35,-30 -18,-20" /><path d="M-125,12 C-75,-6 -35,-6 -18,4" /><path d="M125,-12 C75,-30 35,-30 18,-20" /><path d="M125,12 C75,-6 35,-6 18,4" /></g>
-            <g transform="rotate(-38 190 -60)"><rect x={182} y={-150} width={16} height={120} rx={8} fill="#F0C75E" /><path d="M182 -30 l8 26 8-26 z" fill="#7C2D12" /></g>
-          </g>
-          <g><rect x={110} y={200} width={170} height={64} rx={18} fill="#fff" opacity=".95" /><text x={195} y={243} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={34} fontWeight={700} fill="#BE185D">تَفْسِير</text>
-            <rect x={520} y={200} width={170} height={64} rx={18} fill="#fff" opacity=".9" /><text x={605} y={243} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={34} fontWeight={700} fill="#0B6E4F">تَرْجَمَة</text></g>
-          <rect x={30} y={524} width={280} height={48} rx={24} fill="#fff" opacity=".94" />
-          <text x={170} y={556} textAnchor="middle" fontFamily="-apple-system,'Segoe UI',Arial,sans-serif" fontSize={24} fontWeight={600} fill="#9F1239">Tarjuma &amp; Tafseer</text>
+          <g fill="#F0C75E"><circle cx={190} cy={205} r={10} /><circle cx={610} cy={205} r={10} /><circle cx={145} cy={440} r={8} /><circle cx={655} cy={440} r={8} /></g>
+          <rect x={30} y={524} width={210} height={48} rx={24} fill="#fff" opacity=".94" />
+          <text x={135} y={556} textAnchor="middle" fontFamily="-apple-system,'Segoe UI',Arial,sans-serif" fontSize={24} fontWeight={600} fill="#1E3A8A">Nazra Qur'an</text>
         </svg>
       </div>
     </div>
