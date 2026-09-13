@@ -1,13 +1,14 @@
 "use client";
 import { useEffect } from "react";
 import { useI18n } from "./I18nProvider";
+import { HonorificText } from "./SiteChrome";
 export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()=>{const scrollToHash=()=>{const id=decodeURIComponent(location.hash.slice(1));if(!id)return;requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"}))};scrollToHash();addEventListener("hashchange",scrollToHash);return()=>removeEventListener("hashchange",scrollToHash)},[]);const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
 <main id="main" onClick={handleClick}>
   {/* ================= HERO ================= */}
   <section className="hero" id="home">
     <div className="hero-inner reveal">
       <p className="hero-badge"><span className="dot" /><span data-i18n="hero_badge">{t("hero_badge")}</span></p>
-      <h1 data-i18n="hero_title">{t("hero_title")}</h1>
+      <h1 data-i18n="hero_title"><HonorificText text={t("hero_title")} language={lang}/></h1>
       <p className="hero-sub" data-i18n="hero_sub">{t("hero_sub")}</p>
       <div className="hero-ctas">
         <a href="#enroll" className="btn btn-primary" data-i18n="hero_cta1">{t("hero_cta1")}</a>
@@ -185,7 +186,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
   {/* ================= FEATURES ================= */}
   <section className="features" id="features">
     <div className="section-head reveal">
-      <p className="kicker" data-i18n="features_kicker">{t("features_kicker")}</p>
+      <p className="kicker" data-i18n="features_kicker"><HonorificText text={t("features_kicker")} language={lang}/></p>
       <h2 data-i18n="features_title">{t("features_title")}</h2>
     </div>
     <div className="feature-grid">

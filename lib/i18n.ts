@@ -407,7 +407,7 @@ export const BRAND_NAMES: Record<string,string> = {
   ko:"마르카즈 울 무르타자 (알라께서 그를 기뻐하시기를)"
 };
 
-const BASE_BRAND: Record<string,string> = {
+export const BASE_BRAND: Record<string,string> = {
   en:"Markaz ul Murtaza",ar:"مركز المرتضى",ur:"مرکز المرتضیٰ",fa:"مرکز المرتضیٰ",ps:"مرکز المرتضیٰ",
   sd:"مرکز المرتضیٰ",ks:"مرکز المرتضیٰ",pa:"ਮਰਕਜ਼ੁਲ ਅਫ਼ਿਨੀਯਾਹ",tr:"Markaz ul Murtaza",az:"Markaz ul Murtaza",
   kk:"Markaz ul Murtaza",uz:"Markaz ul Murtaza",id:"Markaz ul Murtaza",ms:"Markaz ul Murtaza",bn:"Markaz ul Murtaza",
