@@ -2,19 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useI18n } from "./I18nProvider";
-import { BASE_BRAND, BRAND_NAMES } from "@/lib/i18n";
-
-export function HonorificText({text,language}:{text:string;language:string}){
- const full=BRAND_NAMES[language]||BRAND_NAMES.en;
- const base=BASE_BRAND[language]||BASE_BRAND.en;
- let honorific="";
- const open=Math.max(full.indexOf("("),full.indexOf("（"));
- if(open>=0){const close=Math.max(full.indexOf(")",open),full.indexOf("）",open));honorific=full.slice(open,close>=open?close+1:undefined)}
- else if(full.startsWith(base))honorific=full.slice(base.length).trim();
- const at=honorific?text.indexOf(honorific):-1;
- if(at<0)return <>{text}</>;
- return <>{text.slice(0,at)}<span className="brand-honorific">{honorific}</span>{text.slice(at+honorific.length)}</>;
-}
+import { HonorificText } from "./HonorificText";
 
 const I18NPath=(code:string)=>Boolean(code&&["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"].includes(code));
 export function Logo(){return <svg className="brand-mark" viewBox="0 0 64 64" aria-hidden><rect width="64" height="64" rx="14" fill="#01411C"/><path d="M42 12a20 20 0 1 0 10.5 37A22 22 0 1 1 42 12z" fill="#f0c75e"/><circle cx="45" cy="20" r="3" fill="#f0c75e"/></svg>}
