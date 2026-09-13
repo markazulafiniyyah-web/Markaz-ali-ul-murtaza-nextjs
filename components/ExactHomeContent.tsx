@@ -146,9 +146,9 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <article className="qari reveal">
         <div className="qari-video">
           <button className="vthumb" type="button" data-open="https://www.facebook.com/MURCenter.official/videos/qari-ahmad-azizi-sb/939381090526629/" aria-label="Watch Qari Ahmed Azizi on Facebook">
-            <img src="/images/qari-azizi-thumb.jpg" alt="Qari Ahmed Azizi reciting the Qur'an" loading="lazy" />
+            <img className="qari-portrait" src="/images/qari-ahmed-azizi-portrait.jpg" alt="Qari Ahmed Azizi, Qur'an reciter and head of the institution" loading="lazy" />
             <span className="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg></span>
-            <span className="vbadge">Facebook&nbsp;→</span>
+            <span className="vbadge">Qur&apos;an Recitation&nbsp;→</span>
           </button>
         </div>
         <div className="qari-info">
