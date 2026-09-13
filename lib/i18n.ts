@@ -407,3 +407,55 @@ ko: { name:"한국어", en:"Korean", flag:"🇰🇷", region:"대한민국", rtl
 
 /* Display order in the language picker */
 export const LANG_ORDER = ["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"];
+
+/* The honorific belongs to Sayyiduna Ali al-Murtaza (may Allah be pleased with him).
+   Keep it attached to the institute name in every available interface language. */
+export const BRAND_NAMES: Record<string,string> = {
+  en:"Markaz ul Murtaza (may Allah be pleased with him)",
+  ar:"مركز المرتضى رضي الله عنه",
+  ur:"مرکز المرتضیٰ رضی اللہ عنہ",
+  fa:"مرکز المرتضیٰ رضی الله عنه",
+  ps:"مرکز المرتضیٰ رضي الله عنه",
+  sd:"مرڪز المرتضى رضي الله عنه",
+  ks:"مرکز المرتضیٰ رضی اللہ عنہ",
+  pa:"ਮਰਕਜ਼ ਉਲ ਮੁਰਤਜ਼ਾ (ਅੱਲਾਹ ਉਨ੍ਹਾਂ ਤੋਂ ਰਾਜ਼ੀ ਹੋਵੇ)",
+  tr:"Markaz ul Murtaza (Allah ondan razı olsun)",
+  az:"Markaz ul Murtaza (Allah ondan razı olsun)",
+  kk:"Markaz ul Murtaza (Алла оған разы болсын)",
+  uz:"Markaz ul Murtaza (Alloh undan rozi bo‘lsin)",
+  id:"Markaz ul Murtaza (semoga Allah meridhainya)",
+  ms:"Markaz ul Murtaza (semoga Allah meredainya)",
+  bn:"মারকাজ উল মুরতাজা (আল্লাহ তাঁর প্রতি সন্তুষ্ট হোন)",
+  hi:"मरकज़ उल मुर्तज़ा (अल्लाह उनसे राज़ी हो)",
+  ta:"மர்கஸ் உல் முர்தஸா (அல்லாஹ் அவரைப் பொருந்திக்கொள்வானாக)",
+  so:"Markaz ul Murtaza (Alle haka raalli noqdo)",
+  sw:"Markaz ul Murtaza (Mwenyezi Mungu amridhie)",
+  ha:"Markaz ul Murtaza (Allah Ya yarda da shi)",
+  am:"Markaz ul Murtaza (አላህ በእርሱ ይደሰት)",
+  fr:"Markaz ul Murtaza (qu’Allah l’agrée)",
+  es:"Markaz ul Murtaza (que Allah esté complacido con él)",
+  de:"Markaz ul Murtaza (möge Allah mit ihm zufrieden sein)",
+  it:"Markaz ul Murtaza (che Allah sia soddisfatto di lui)",
+  pt:"Markaz ul Murtaza (que Allah esteja satisfeito com ele)",
+  ru:"Markaz ul Murtaza (да будет доволен им Аллах)",
+  zh:"Markaz ul Murtaza（愿真主喜悦他）古兰经学院",
+  ja:"マルカズ・アル・ムルタザー（アッラーが彼にご満悦でありますように）",
+  ko:"마르카즈 울 무르타자 (알라께서 그를 기뻐하시기를)"
+};
+
+const BASE_BRAND: Record<string,string> = {
+  en:"Markaz ul Murtaza",ar:"مركز المرتضى",ur:"مرکز المرتضیٰ",fa:"مرکز المرتضیٰ",ps:"مرکز المرتضیٰ",
+  sd:"مرکز المرتضیٰ",ks:"مرکز المرتضیٰ",pa:"ਮਰਕਜ਼ੁਲ ਅਫ਼ਿਨੀਯਾਹ",tr:"Markaz ul Murtaza",az:"Markaz ul Murtaza",
+  kk:"Markaz ul Murtaza",uz:"Markaz ul Murtaza",id:"Markaz ul Murtaza",ms:"Markaz ul Murtaza",bn:"Markaz ul Murtaza",
+  hi:"Markaz ul Murtaza",ta:"Markaz ul Murtaza",so:"Markaz ul Murtaza",sw:"Markaz ul Murtaza",ha:"Markaz ul Murtaza",
+  am:"Markaz ul Murtaza",fr:"Markaz ul Murtaza",es:"Markaz ul Murtaza",de:"Markaz ul Murtaza",it:"Markaz ul Murtaza",
+  pt:"Markaz ul Murtaza",ru:"Markaz ul Murtaza",zh:"Markaz ul Murtaza 古兰经学院",ja:"Markaz ul Murtaza",ko:"Markaz ul Murtaza"
+};
+for (const code of LANG_ORDER) {
+  const base=BASE_BRAND[code];
+  const full=BRAND_NAMES[code];
+  for (const key of Object.keys(I18N[code].t)) {
+    if (base && I18N[code].t[key].includes(base)) I18N[code].t[key]=I18N[code].t[key].split(base).join(full);
+  }
+  I18N[code].t.hero_title=full;
+}

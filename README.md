@@ -1,6 +1,6 @@
-# Markaz ul Murtaza — Next.js
+# Markaz ul Murtaza (may Allah be pleased with him) — Next.js
 
-A native Next.js 16 App Router application for Markaz ul Murtaza. The project contains no injected legacy pages or static-site source.
+A native Next.js 16 App Router application for Markaz ul Murtaza (may Allah be pleased with him). The project contains no injected legacy pages or static-site source.
 
 ## Structure
 

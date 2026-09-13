@@ -687,3 +687,8 @@ html[lang="ur"] .btn{padding-block:8px}
 }
 section[id],footer[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
 .quran-program-title{font-family:var(--quran)!important;font-weight:400!important;line-height:1.8!important;letter-spacing:0!important;word-spacing:.1em}
+/* Long localized honorifics stay readable without breaking the Apple-style header. */
+.nav .brand-name{max-width:min(310px,42vw);white-space:normal;line-height:1.12;font-size:12.5px}
+.hero h1{font-size:clamp(34px,6.4vw,76px);max-width:1100px;margin-inline:auto}
+@media(max-width:1100px){.nav-links{display:none}.hamburger{display:flex}}
+@media(max-width:560px){.nav .brand-name{max-width:48vw;font-size:10.5px}.hero h1{font-size:clamp(30px,10vw,48px)}}
