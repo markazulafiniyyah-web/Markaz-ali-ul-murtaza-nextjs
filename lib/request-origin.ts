@@ -8,6 +8,6 @@ export function originFromHeaders(headers: Headers, fallbackProtocol = "https:")
   const host = forwardedHost || headers.get("host")?.trim();
   const forwardedProtocol = headers.get("x-forwarded-proto")?.split(",")[0].trim();
   const protocol = forwardedProtocol || fallbackProtocol.replace(":", "") || "https";
-  if (!host || !/^[a-z0-9.:[\]-]+$/i.test(host)) return "https://markazalimurtaza.com";
+  if (!host || !/^[a-z0-9.:[\]-]+$/i.test(host)) return "https://markazulmurtaza.vercel.app";
   return `${protocol}://${host}`;
 }
