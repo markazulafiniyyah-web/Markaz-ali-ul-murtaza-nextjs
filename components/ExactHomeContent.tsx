@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useI18n } from "./I18nProvider";
 import { HonorificText } from "./SmallHonorific";
 import { ENROLL_WHATSAPP_URL, QARI_AHMED_AZIZI_PHONE, QARI_AHMED_AZIZI_TEL, QARI_AHMED_AZIZI_WHATSAPP } from "@/lib/contact";
-export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()=>{const scrollToHash=()=>{const id=decodeURIComponent(location.hash.slice(1));if(!id)return;requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"}))};scrollToHash();addEventListener("hashchange",scrollToHash);return()=>removeEventListener("hashchange",scrollToHash)},[]);useEffect(()=>{const counters=Array.from(document.querySelectorAll<HTMLElement>(".stat-num[data-count]"));const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;const animate=(element:HTMLElement)=>{const target=Number(element.dataset.count||0);if(reduceMotion){element.textContent=target.toLocaleString();return}const start=performance.now(),duration=1400;const frame=(now:number)=>{const progress=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-progress,3);element.textContent=Math.round(target*eased).toLocaleString();if(progress<1)requestAnimationFrame(frame)};requestAnimationFrame(frame)};const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){animate(entry.target as HTMLElement);observer.unobserve(entry.target)}}),{threshold:.35});counters.forEach(counter=>observer.observe(counter));return()=>observer.disconnect()},[]);const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
+export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()=>{const scrollToHash=()=>{const id=decodeURIComponent(location.hash.slice(1));if(!id)return;requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"}))};scrollToHash();addEventListener("hashchange",scrollToHash);return()=>removeEventListener("hashchange",scrollToHash)},[]);const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
 <main id="main" onClick={handleClick}>
   {/* ================= HERO ================= */}
   <section className="hero" id="home">
@@ -155,6 +155,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <div className="qari-info">
           <h3>Qari Ahmed Azizi</h3>
           <p className="qari-role" data-i18n="head_role">{t("head_role")}</p>
+          <p className="qari-appointment">Mudir (Principal), Jamia Riaz-ul-Jannah · Allama Iqbal Town, Lahore</p>
           <a className="qari-watch" href="https://www.facebook.com/watch/?v=939381090526629" target="_blank" rel="noopener" data-i18n="watch_fb">{t("watch_fb")}</a>
           <a className="qari-phone" href={QARI_AHMED_AZIZI_TEL} dir="ltr">{QARI_AHMED_AZIZI_PHONE}</a>
           <div className="qari-actions">
@@ -226,10 +227,10 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
   {/* ================= STATS ================= */}
   <section className="stats">
     <div className="stats-grid">
-      <div className="stat reveal"><span className="stat-num" data-count={400}>0</span><span className="stat-label" data-i18n="stats_students">{t("stats_students")}</span></div>
-      <div className="stat reveal"><span className="stat-num" data-count={2}>0</span><span className="stat-label" data-i18n="stats_countries">{t("stats_countries")}</span></div>
-      <div className="stat reveal"><span className="stat-num" data-count={50}>0</span><span className="stat-label" data-i18n="stats_teachers">{t("stats_teachers")}</span></div>
-      <div className="stat reveal"><span className="stat-num" data-count={16}>0</span><span className="stat-label" data-i18n="stats_years">{t("stats_years")}</span></div>
+      <div className="stat reveal"><span className="stat-num">1.2K+</span><span className="stat-label" data-i18n="stats_students">{t("stats_students")}</span></div>
+      <div className="stat reveal"><span className="stat-num">2</span><span className="stat-label" data-i18n="stats_countries">{t("stats_countries")}</span></div>
+      <div className="stat reveal"><span className="stat-num">500+</span><span className="stat-label" data-i18n="stats_teachers">{t("stats_teachers")}</span></div>
+      <div className="stat reveal"><span className="stat-num">16</span><span className="stat-label" data-i18n="stats_years">{t("stats_years")}</span></div>
     </div>
   </section>
   {/* ================= HOW IT WORKS ================= */}
