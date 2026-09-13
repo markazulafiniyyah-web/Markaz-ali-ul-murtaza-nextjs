@@ -225,9 +225,9 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
   {/* ================= STATS ================= */}
   <section className="stats">
     <div className="stats-grid">
-      <div className="stat reveal"><span className="stat-num" data-count={12000}>0</span><span className="stat-label" data-i18n="stats_students">{t("stats_students")}</span></div>
-      <div className="stat reveal"><span className="stat-num" data-count={45}>0</span><span className="stat-label" data-i18n="stats_countries">{t("stats_countries")}</span></div>
-      <div className="stat reveal"><span className="stat-num" data-count={300}>0</span><span className="stat-label" data-i18n="stats_teachers">{t("stats_teachers")}</span></div>
+      <div className="stat reveal"><span className="stat-num" data-count={400}>0</span><span className="stat-label" data-i18n="stats_students">{t("stats_students")}</span></div>
+      <div className="stat reveal"><span className="stat-num" data-count={2}>0</span><span className="stat-label" data-i18n="stats_countries">{t("stats_countries")}</span></div>
+      <div className="stat reveal"><span className="stat-num" data-count={50}>0</span><span className="stat-label" data-i18n="stats_teachers">{t("stats_teachers")}</span></div>
       <div className="stat reveal"><span className="stat-num" data-count={16}>0</span><span className="stat-label" data-i18n="stats_years">{t("stats_years")}</span></div>
     </div>
   </section>
