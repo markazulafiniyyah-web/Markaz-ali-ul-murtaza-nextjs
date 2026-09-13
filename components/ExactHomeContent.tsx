@@ -1,6 +1,7 @@
 "use client";
+import { useEffect } from "react";
 import { useI18n } from "./I18nProvider";
-export default function ExactHomeContent(){const {t}=useI18n();const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
+export default function ExactHomeContent(){const {t}=useI18n();useEffect(()=>{const scrollToHash=()=>{const id=decodeURIComponent(location.hash.slice(1));if(!id)return;requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"}))};scrollToHash();addEventListener("hashchange",scrollToHash);return()=>removeEventListener("hashchange",scrollToHash)},[]);const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
 <main id="main" onClick={handleClick}>
   {/* ================= HERO ================= */}
   <section className="hero" id="home">

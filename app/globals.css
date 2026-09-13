@@ -685,3 +685,4 @@ html[lang="ur"] .btn{padding-block:8px}
   .had-ar{font-size:21px!important;line-height:2.35!important}
   html[lang="ur"] body{font-size:15.5px}
 }
+section[id],footer[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}

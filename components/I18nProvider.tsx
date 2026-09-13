@@ -6,8 +6,8 @@ import { HADITH_FEATURE_TRANSLATIONS, DONATE_FEATURE_TRANSLATIONS } from "@/lib/
 type Ctx = { lang:string; setLang:(s:string)=>void; t:(key:string)=>string; languages:typeof I18N; order:string[] };
 const Context=createContext<Ctx|null>(null);
 const RTL=new Set(["ar","ur","fa","ps","sd","ks"]);
-export function I18nProvider({children}:{children:React.ReactNode}){
- const [lang,setLangState]=useState("en");
+export function I18nProvider({children,initialLang="en"}:{children:React.ReactNode;initialLang?:string}){
+ const [lang,setLangState]=useState(initialLang);
  useEffect(()=>{
   const url=new URLSearchParams(location.search).get("lang");
   const pathLang=location.pathname.split("/")[1];
