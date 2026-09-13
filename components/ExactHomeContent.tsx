@@ -28,8 +28,8 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <rect x={40} y={40} width={1120} height={480} rx={16} fill="none" stroke="#fff" strokeOpacity=".12" />
         <path d="M1030 108a72 72 0 1 0 40 133 80 80 0 1 1-40-133z" fill="url(#hAgold)" opacity=".92" />
         <circle cx={1082} cy={132} r={11} fill="#F0C75E" />
-        <text x={600} y={272} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={118} fontWeight={700} fill="url(#hAgold)">الْقُرْآنُ الْكَرِيمُ</text>
-        <text x={600} y={356} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={30} fill="#fff" opacity=".88">حِفْظٌ · نَاظِرَةٌ · تَجْوِيدٌ</text>
+        <text x={600} y={272} textAnchor="middle" fontFamily="Amiri Quran,'Noto Naskh Arabic',serif" fontSize={118} fontWeight={400} fill="url(#hAgold)">الْقُرْآنُ الْكَرِيمُ</text>
+        <text x={600} y={356} textAnchor="middle" fontFamily="Amiri Quran,'Noto Naskh Arabic',serif" fontSize={30} fill="#fff" opacity=".88">حِفْظٌ · تِلَاوَةٌ · تَجْوِيدٌ</text>
         <g><circle cx={510} cy={440} r={11} fill="#F0C75E" /><circle cx={570} cy={440} r={11} fill="#34D399" /><circle cx={630} cy={440} r={11} fill="#F472B6" /><circle cx={690} cy={440} r={11} fill="#FB923C" /></g>
       </svg>
     </div>
@@ -64,7 +64,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
             <pattern id="pH" width={80} height={80} patternUnits="userSpaceOnUse"><path d="M40 8l8 24 24 8-24 8-8 24-8-24-24-8 24-8z" fill="none" stroke="#fff" strokeOpacity=".12" /></pattern>
           </defs>
           <rect width={800} height={600} rx={24} fill="url(#gH)" /><rect width={800} height={600} rx={24} fill="url(#pH)" />
-          <text x={400} y={150} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={76} fontWeight={700} fill="#FDE68A">حِفْظُ الْقُرْآنِ</text>
+          <text x={400} y={150} textAnchor="middle" fontFamily="Amiri Quran,'Noto Naskh Arabic',serif" fontSize={76} fontWeight={400} fill="#FDE68A">حِفْظُ الْقُرْآنِ</text>
           <g transform="translate(400,370)">
             <path d="M-180,-45 C-95,-78 -25,-78 0,-55 L0,70 C-25,47 -95,47 -180,80 Z" fill="#FFF7E6" />
             <path d="M180,-45 C95,-78 25,-78 0,-55 L0,70 C25,47 95,47 180,80 Z" fill="#FBEFD4" />
@@ -79,7 +79,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
     </div>
     <div className="feature-row flip reveal">
       <div className="feature-copy">
-        <h3 data-i18n="p2_title">{t("p2_title")}</h3>
+        <h3 data-i18n="p2_title" className={lang==="ar"?"quran-program-title":undefined}>{t("p2_title")}</h3>
         <p data-i18n="p2_desc">{t("p2_desc")}</p>
         <ul className="checks">
           <li data-i18n="p2_b1">{t("p2_b1")}</li>
@@ -95,8 +95,8 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
             <pattern id="pT" width={80} height={80} patternUnits="userSpaceOnUse"><path d="M40 8l8 24 24 8-24 8-8 24-8-24-24-8 24-8z" fill="none" stroke="#fff" strokeOpacity=".12" /></pattern>
           </defs>
           <rect width={800} height={600} rx={24} fill="url(#gT)" /><rect width={800} height={600} rx={24} fill="url(#pT)" />
-          <text x={400} y={190} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={64} fontWeight={700}><tspan fill="#fff">بِسْمِ </tspan><tspan fill="#FDE047">اللَّهِ </tspan><tspan fill="#4ADE80">الرَّحْمَٰنِ </tspan><tspan fill="#38BDF8">الرَّحِيمِ</tspan></text>
-          <text x={400} y={315} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={44} fontWeight={700}><tspan fill="#FB923C">مَدّ </tspan><tspan fill="#fff">· </tspan><tspan fill="#F472B6">غُنَّة </tspan><tspan fill="#fff">· </tspan><tspan fill="#4ADE80">إِدْغَام </tspan><tspan fill="#fff">· </tspan><tspan fill="#22D3EE">إِخْفَاء</tspan></text>
+          <text x={400} y={190} textAnchor="middle" fontFamily="Amiri Quran,'Noto Naskh Arabic',serif" fontSize={64} fontWeight={400}><tspan fill="#fff">بِسْمِ </tspan><tspan fill="#FDE047">اللَّهِ </tspan><tspan fill="#4ADE80">الرَّحْمَٰنِ </tspan><tspan fill="#38BDF8">الرَّحِيمِ</tspan></text>
+          <text x={400} y={315} textAnchor="middle" fontFamily="Amiri Quran,'Noto Naskh Arabic',serif" fontSize={44} fontWeight={400}><tspan fill="#FB923C">مَدّ </tspan><tspan fill="#fff">· </tspan><tspan fill="#F472B6">غُنَّة </tspan><tspan fill="#fff">· </tspan><tspan fill="#4ADE80">إِدْغَام </tspan><tspan fill="#fff">· </tspan><tspan fill="#22D3EE">إِخْفَاء</tspan></text>
           <g><circle cx={250} cy={410} r={13} fill="#FB923C" /><circle cx={350} cy={410} r={13} fill="#F472B6" /><circle cx={450} cy={410} r={13} fill="#4ADE80" /><circle cx={550} cy={410} r={13} fill="#22D3EE" /></g>
           <rect x={30} y={524} width={150} height={48} rx={24} fill="#fff" opacity=".94" />
           <text x={105} y={556} textAnchor="middle" fontFamily="-apple-system,'Segoe UI',Arial,sans-serif" fontSize={24} fontWeight={600} fill="#6D28D9">Tajweed</text>
@@ -105,7 +105,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
     </div>
     <div className="feature-row reveal">
       <div className="feature-copy">
-        <h3 data-i18n="p3_title">{t("p3_title")}</h3>
+        <h3 data-i18n="p3_title" className={lang==="ar"?"quran-program-title":undefined}>{t("p3_title")}</h3>
         <p data-i18n="p3_desc">{t("p3_desc")}</p>
         <ul className="checks">
           <li data-i18n="p3_b1">{t("p3_b1")}</li>
@@ -121,7 +121,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
             <pattern id="pN" width={80} height={80} patternUnits="userSpaceOnUse"><path d="M40 8l8 24 24 8-24 8-8 24-8-24-24-8 24-8z" fill="none" stroke="#fff" strokeOpacity=".12" /></pattern>
           </defs>
           <rect width={800} height={600} rx={24} fill="url(#gN)" /><rect width={800} height={600} rx={24} fill="url(#pN)" />
-          <text x={400} y={142} textAnchor="middle" fontFamily="Amiri,'Noto Naskh Arabic',serif" fontSize={68} fontWeight={700} fill="#FDE68A">نَاظِرَةُ الْقُرْآنِ</text>
+          <text x={400} y={142} textAnchor="middle" fontFamily="Amiri Quran,'Noto Naskh Arabic',serif" fontSize={68} fontWeight={400} fill="#FDE68A">تِلَاوَةُ الْقُرْآنِ نَظَرًا</text>
           <g transform="translate(400,370)">
             <path d="M-185,-52 C-100,-82 -28,-82 0,-58 L0,78 C-28,52 -100,52 -185,86 Z" fill="#FFF7E6" />
             <path d="M185,-52 C100,-82 28,-82 0,-58 L0,78 C28,52 100,52 185,86 Z" fill="#FBEFD4" />
