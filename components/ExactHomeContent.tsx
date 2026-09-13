@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { useI18n } from "./I18nProvider";
 import { HonorificText } from "./SmallHonorific";
+import { ENROLL_WHATSAPP_URL, QARI_AHMED_AZIZI_PHONE, QARI_AHMED_AZIZI_TEL, QARI_AHMED_AZIZI_WHATSAPP } from "@/lib/contact";
 export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()=>{const scrollToHash=()=>{const id=decodeURIComponent(location.hash.slice(1));if(!id)return;requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"}))};scrollToHash();addEventListener("hashchange",scrollToHash);return()=>removeEventListener("hashchange",scrollToHash)},[]);useEffect(()=>{const counters=Array.from(document.querySelectorAll<HTMLElement>(".stat-num[data-count]"));const reduceMotion=matchMedia("(prefers-reduced-motion: reduce)").matches;const animate=(element:HTMLElement)=>{const target=Number(element.dataset.count||0);if(reduceMotion){element.textContent=target.toLocaleString();return}const start=performance.now(),duration=1400;const frame=(now:number)=>{const progress=Math.min((now-start)/duration,1);const eased=1-Math.pow(1-progress,3);element.textContent=Math.round(target*eased).toLocaleString();if(progress<1)requestAnimationFrame(frame)};requestAnimationFrame(frame)};const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){animate(entry.target as HTMLElement);observer.unobserve(entry.target)}}),{threshold:.35});counters.forEach(counter=>observer.observe(counter));return()=>observer.disconnect()},[]);const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
 <main id="main" onClick={handleClick}>
   {/* ================= HERO ================= */}
@@ -155,10 +156,10 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <h3>Qari Ahmed Azizi</h3>
           <p className="qari-role" data-i18n="head_role">{t("head_role")}</p>
           <a className="qari-watch" href="https://www.facebook.com/watch/?v=939381090526629" target="_blank" rel="noopener" data-i18n="watch_fb">{t("watch_fb")}</a>
-          <a className="qari-phone" href="tel:+923014592661" dir="ltr">+92 301 4592661</a>
+          <a className="qari-phone" href={QARI_AHMED_AZIZI_TEL} dir="ltr">{QARI_AHMED_AZIZI_PHONE}</a>
           <div className="qari-actions">
-            <a className="btn btn-call" href="tel:+923014592661" data-i18n="call_label">{t("call_label")}</a>
-            <a className="btn btn-wa" href="https://wa.me/923014592661" target="_blank" rel="noopener">WhatsApp</a>
+            <a className="btn btn-call" href={QARI_AHMED_AZIZI_TEL} data-i18n="call_label">{t("call_label")}</a>
+            <a className="btn btn-wa" href={QARI_AHMED_AZIZI_WHATSAPP} target="_blank" rel="noopener">WhatsApp</a>
           </div>
         </div>
       </article>
@@ -285,7 +286,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <h2 data-i18n="cta_title">{t("cta_title")}</h2>
       <p data-i18n="cta_sub">{t("cta_sub")}</p>
       <div className="hero-ctas">
-        <a href="https://wa.me/923014592661" className="btn btn-light" target="_blank" rel="noopener" data-i18n="cta_btn">{t("cta_btn")}</a>
+        <a href={ENROLL_WHATSAPP_URL} className="btn btn-light" target="_blank" rel="noopener" data-i18n="cta_btn">{t("cta_btn")}</a>
         <a href="mailto:info@markazalimurtaza.com" className="btn btn-outline-light" data-i18n="nav_contact">{t("nav_contact")}</a>
       </div>
     </div>
