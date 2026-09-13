@@ -56,7 +56,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <li data-i18n="p1_b2">{t("p1_b2")}</li>
           <li data-i18n="p1_b3">{t("p1_b3")}</li>
         </ul>
-        <a href="#enroll" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
+        <a href="/hifz" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
         <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Hifz-ul-Qur'an">
@@ -87,7 +87,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <li data-i18n="p2_b2">{t("p2_b2")}</li>
           <li data-i18n="p2_b3">{t("p2_b3")}</li>
         </ul>
-        <a href="#enroll" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
+        <a href="/tajweed" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
         <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Tajweed — colour-coded recitation rules">
@@ -113,7 +113,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <li data-i18n="p3_b2">{t("p3_b2")}</li>
           <li data-i18n="p3_b3">{t("p3_b3")}</li>
         </ul>
-        <a href="#enroll" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
+        <a href="/nazra" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
         <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Nazra Qur'an — fluent recitation">

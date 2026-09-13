@@ -770,3 +770,12 @@ svg,video,iframe{max-width:100%}
   .lang-panel{top:calc(var(--nav-h) + 4px);max-height:calc(100dvh - var(--nav-h) - 8px)}
   .mobile-menu{max-height:calc(100dvh - var(--nav-h))}
 }
+
+/* ---------------- search-focused program pages ---------------- */
+.course-hero{color:#fff;text-align:center;padding:calc(var(--nav-h) + clamp(62px,9vw,108px)) 20px clamp(58px,8vw,92px);background:linear-gradient(145deg,#03301d,#01411c 62%,#0b6e4f)}
+.course-hero.course-tajweed{background:linear-gradient(145deg,#3b176f,#6d28a8 58%,#9d174d)}
+.course-hero.course-nazra{background:linear-gradient(145deg,#172554,#1e3a8a 56%,#0e7490)}
+.course-hero>div{max-width:880px;margin:auto}.course-ar{font-family:var(--quran);font-size:clamp(32px,5vw,60px);line-height:1.8;color:var(--gold);margin-bottom:8px}.course-hero h1{font-size:clamp(36px,6vw,68px);line-height:1.08;color:#fff;text-wrap:balance}.course-intro{max-width:720px;margin:20px auto 0;color:rgba(255,255,255,.82);font-size:clamp(17px,2vw,21px);line-height:1.65}
+.course-content{max-width:1080px;margin:auto;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:clamp(26px,5vw,64px);align-items:start}.course-main h2{font-size:clamp(30px,4.5vw,48px);margin-bottom:18px}.course-main>p:not(.kicker){color:var(--text-2);font-size:18px;line-height:1.75}.course-main h3{font-size:24px;margin:34px 0 16px}.course-main ul{list-style:none;display:grid;gap:12px}.course-main li{position:relative;padding:13px 16px 13px 44px;background:var(--bg-alt);border-radius:14px;line-height:1.5}.course-main li::before{content:"✓";position:absolute;left:17px;color:var(--green);font-weight:800}.course-aside{background:var(--bg-alt);border:1px solid var(--hairline);border-radius:var(--radius-s);padding:26px;display:flex;flex-direction:column;gap:18px;position:sticky;top:calc(var(--nav-h) + 22px)}.course-aside>div{display:flex;flex-direction:column;gap:4px;padding-bottom:16px;border-bottom:1px solid var(--hairline)}.course-aside span{font-size:12px;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em}.course-aside strong{font-size:15px;line-height:1.5}.course-aside .btn{font-size:14px;padding-inline:16px}
+@media(max-width:800px){.course-content{grid-template-columns:1fr}.course-aside{position:static}.course-hero{padding-inline:16px}}
+@media(max-width:480px){.course-content{padding-inline:16px}.course-main>p:not(.kicker){font-size:16.5px}.course-main li{padding-left:40px}.course-aside{padding:21px}}
