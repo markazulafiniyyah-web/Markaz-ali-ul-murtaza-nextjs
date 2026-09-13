@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useI18n } from "./I18nProvider";
-import { HonorificText } from "./HonorificText";
+import { HonorificText } from "./SmallHonorific";
 
 const I18NPath=(code:string)=>Boolean(code&&["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"].includes(code));
 export function Logo(){return <svg className="brand-mark" viewBox="0 0 64 64" aria-hidden><rect width="64" height="64" rx="14" fill="#01411C"/><path d="M42 12a20 20 0 1 0 10.5 37A22 22 0 1 1 42 12z" fill="#f0c75e"/><circle cx="45" cy="20" r="3" fill="#f0c75e"/></svg>}
