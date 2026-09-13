@@ -82,8 +82,9 @@ html[dir="rtl"] .link-more::after{content:" ‹"}
 .brand{display:flex;align-items:center;gap:9px;color:var(--text)}
 .brand-mark{width:26px;height:26px;border-radius:7px}
 .brand-name{font-weight:600;font-size:15px;letter-spacing:0;white-space:nowrap}
-.brand-honorific{display:inline-block;margin-inline-start:.28em;font-size:.28em;font-weight:500;line-height:1;letter-spacing:0;vertical-align:super;white-space:nowrap}
-.brand-name .brand-honorific{font-size:.48em}
+.brand-honorific{display:inline-block;margin-inline-start:.28em;font-size:.42em;font-weight:500;line-height:1;letter-spacing:0;vertical-align:super;white-space:nowrap}
+.hero h1>.brand-honorific{position:relative;top:-2.2em;font-size:clamp(8px,.72vw,11px)!important;vertical-align:baseline}
+.brand-name .brand-honorific{position:relative;top:-.55em;font-size:5px!important;vertical-align:baseline}
 .nav-links{display:flex;gap:26px;margin-inline-start:auto}
 .nav-links a{color:#1d1d1f;opacity:.85;font-size:13.5px;font-weight:400;transition:opacity .2s}
 .nav-links a:hover{opacity:1;color:var(--text)}
