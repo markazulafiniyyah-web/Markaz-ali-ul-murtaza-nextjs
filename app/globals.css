@@ -686,3 +686,4 @@ html[lang="ur"] .btn{padding-block:8px}
   html[lang="ur"] body{font-size:15.5px}
 }
 section[id],footer[id]{scroll-margin-top:calc(var(--nav-h) + 16px)}
+.quran-program-title{font-family:var(--quran)!important;font-weight:400!important;line-height:1.8!important;letter-spacing:0!important;word-spacing:.1em}
