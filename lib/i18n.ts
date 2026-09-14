@@ -379,12 +379,12 @@ export const LANG_ORDER = ["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk
    Keep it attached to the institute name in every available interface language. */
 export const BRAND_NAMES: Record<string,string> = {
   en:"Markaz Al Murtaza (may Allah be pleased with him) Al Islami & Safia Islamic Institute",
-  ar:"مرکز المرتضٰی الاسلامی رضي الله عنه و صفیہ اسلامک انسٹیٹیوٹ",
-  ur:"مرکز المرتضٰی الاسلامی رضی اللہ عنہ و صفیہ اسلامک انسٹیٹیوٹ",
-  fa:"مرکز المرتضٰی الاسلامی رضی الله عنه و صفیہ اسلامک انسٹیٹیوٹ",
-  ps:"مرکز المرتضٰی الاسلامی رضي الله عنه و صفیہ اسلامک انسٹیٹیوٹ",
-  sd:"مرکز المرتضٰی الاسلامی رضي الله عنه و صفیہ اسلامک انسٹیٹیوٹ",
-  ks:"مرکز المرتضٰی الاسلامی رضی اللہ عنہ و صفیہ اسلامک انسٹیٹیوٹ",
+  ar:"مرکز المرتضٰی رضي الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
+  ur:"مرکز المرتضٰی رضی اللہ عنہ الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
+  fa:"مرکز المرتضٰی رضی الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
+  ps:"مرکز المرتضٰی رضي الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
+  sd:"مرکز المرتضٰی رضي الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
+  ks:"مرکز المرتضٰی رضی اللہ عنہ الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
   pa:"Markaz Al Murtaza (ਅੱਲਾਹ ਉਨ੍ਹਾਂ ਤੋਂ ਰਾਜ਼ੀ ਹੋਵੇ) Al Islami & Safia Islamic Institute",
   tr:"Markaz Al Murtaza (Allah ondan razı olsun) Al Islami & Safia Islamic Institute",
   az:"Markaz Al Murtaza (Allah ondan razı olsun) Al Islami & Safia Islamic Institute",
