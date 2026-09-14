@@ -155,7 +155,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <div className="qari-info">
           <h3>Qari Ahmed Azizi</h3>
           <p className="qari-role" data-i18n="head_role">{t("head_role")}</p>
-          <p className="qari-appointment">Mudir (Principal), Jamia Riaz-ul-Jannah · Allama Iqbal Town, Lahore</p>
+          <p className="qari-appointment">Mudir (Principal), <a href="/jamia-riaz-ul-jannah">Jamia Riaz-ul-Jannah</a> · Allama Iqbal Town, Lahore</p>
           <a className="qari-watch" href="https://www.facebook.com/watch/?v=939381090526629" target="_blank" rel="noopener" data-i18n="watch_fb">{t("watch_fb")}</a>
           <a className="qari-phone" href={QARI_AHMED_AZIZI_TEL} dir="ltr">{QARI_AHMED_AZIZI_PHONE}</a>
           <div className="qari-actions">
