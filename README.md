@@ -1,6 +1,6 @@
-# Markaz ul Murtaza (may Allah be pleased with him) — Next.js
+# Markaz Al Murtaza (may Allah be pleased with him) Al Islami & Safia Islamic Institute — Next.js
 
-A native Next.js 16 App Router application for Markaz ul Murtaza (may Allah be pleased with him). The project contains no injected legacy pages or static-site source.
+A native Next.js 16 App Router application for Markaz Al Murtaza Al Islami & Safia Islamic Institute. The project contains no injected legacy pages or static-site source.
 
 ## Structure
 
