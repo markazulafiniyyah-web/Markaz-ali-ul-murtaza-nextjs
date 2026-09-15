@@ -135,6 +135,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         </svg>
       </div>
     </div>
+    <p className="programs-combined-link">Looking for both programs together? <a href="/online-hifz-tajweed-institute">Explore our online Hifz and Tajweed institute.</a></p>
   </section>
   {/* ================= QURRAS ================= */}
   <section className="qurras" id="qurras">
