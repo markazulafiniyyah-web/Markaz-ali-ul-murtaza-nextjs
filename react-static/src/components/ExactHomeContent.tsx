@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useI18n } from "./I18nProvider";
 import { HonorificText } from "./SmallHonorific";
 import { ENROLL_WHATSAPP_URL, QARI_AHMED_AZIZI_PHONE, QARI_AHMED_AZIZI_TEL, QARI_AHMED_AZIZI_WHATSAPP } from "@/lib/contact";
+import { sitePath } from "@/lib/site-path";
 export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()=>{const scrollToHash=()=>{const id=decodeURIComponent(location.hash.slice(1));if(!id)return;requestAnimationFrame(()=>document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"}))};scrollToHash();addEventListener("hashchange",scrollToHash);return()=>removeEventListener("hashchange",scrollToHash)},[]);const handleClick=(event:React.MouseEvent<HTMLElement>)=>{const button=(event.target as HTMLElement).closest<HTMLButtonElement>(".vthumb");if(!button)return;const url=button.dataset.open||(button.dataset.embed?button.dataset.embed.replace("youtube-nocookie.com/embed/","youtube.com/watch?v=").split("?")[0]:"");if(url)window.open(url,"_blank","noopener")};return (
 <main id="main" onClick={handleClick}>
   {/* ================= HERO ================= */}
@@ -48,9 +49,9 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <p className="section-sub">{t("visual_sub")}</p>
     </div>
     <div className="institute-visual-grid">
-      <figure className="institute-visual-card visual-wide reveal"><img src="/images/institute-wide-front.webp" alt="Wide 3D architectural visualization of the Qur'an institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
-      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-entrance.webp" alt="3D visualization of the institute entrance and arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
-      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-community.webp" alt="Evening 3D visualization of the Qur'an learning institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card visual-wide reveal"><img src={sitePath("/images/institute-wide-front.webp")} alt="Wide 3D architectural visualization of the Qur'an institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src={sitePath("/images/institute-wide-entrance.webp")} alt="3D visualization of the institute entrance and arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src={sitePath("/images/institute-wide-community.webp")} alt="Evening 3D visualization of the Qur'an learning institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
     </div>
   </section>
   {/* ================= MISSION / CONTENT MARKETING ================= */}
@@ -71,7 +72,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <li data-i18n="p1_b2">{t("p1_b2")}</li>
           <li data-i18n="p1_b3">{t("p1_b3")}</li>
         </ul>
-        <a href="/hifz" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
+        <a href={sitePath("/hifz")} className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
         <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Hifz-ul-Qur'an">
@@ -102,7 +103,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <li data-i18n="p2_b2">{t("p2_b2")}</li>
           <li data-i18n="p2_b3">{t("p2_b3")}</li>
         </ul>
-        <a href="/tajweed" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
+        <a href={sitePath("/tajweed")} className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
         <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Tajweed — colour-coded recitation rules">
@@ -128,7 +129,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <li data-i18n="p3_b2">{t("p3_b2")}</li>
           <li data-i18n="p3_b3">{t("p3_b3")}</li>
         </ul>
-        <a href="/nazra" className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
+        <a href={sitePath("/nazra")} className="link-more" data-i18n="programs_more">{t("programs_more")}</a>
       </div>
       <div className="feature-media">
         <svg className="poster" viewBox="0 0 800 600" role="img" aria-label="Nazra Qur'an — fluent recitation">
@@ -150,7 +151,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         </svg>
       </div>
     </div>
-    <p className="programs-combined-link">Looking for both programs together? <a href="/online-hifz-tajweed-institute">Explore our online Hifz and Tajweed institute.</a></p>
+    <p className="programs-combined-link">Looking for both programs together? <a href={sitePath("/online-hifz-tajweed-institute")}>Explore our online Hifz and Tajweed institute.</a></p>
   </section>
   {/* ================= QURRAS ================= */}
   <section className="qurras" id="qurras">
@@ -163,7 +164,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <article className="qari reveal">
         <div className="qari-video">
           <button className="vthumb" type="button" data-open="https://www.facebook.com/MURCenter.official/videos/qari-ahmad-azizi-sb/939381090526629/" aria-label="Watch Qari Ahmed Azizi on Facebook">
-            <img src="/images/qari-azizi-thumb.jpg" alt="Qari Ahmed Azizi reciting the Qur'an" loading="lazy" />
+            <img src={sitePath("/images/qari-azizi-thumb.jpg")} alt="Qari Ahmed Azizi reciting the Qur'an" loading="lazy" />
             <span className="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg></span>
             <span className="vbadge">Facebook&nbsp;→</span>
           </button>
@@ -171,7 +172,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <div className="qari-info">
           <h3>Qari Ahmed Azizi</h3>
           <p className="qari-role" data-i18n="head_role">{t("head_role")}</p>
-          <p className="qari-appointment">Mudir (Principal), <a href="/jamia-riaz-ul-jannah">Jamia Riaz-ul-Jannah</a> · Allama Iqbal Town, Lahore</p>
+          <p className="qari-appointment">Mudir (Principal), <a href={sitePath("/jamia-riaz-ul-jannah")}>Jamia Riaz-ul-Jannah</a> · Allama Iqbal Town, Lahore</p>
           <a className="qari-watch" href="https://www.facebook.com/watch/?v=939381090526629" target="_blank" rel="noopener" data-i18n="watch_fb">{t("watch_fb")}</a>
           <a className="qari-phone" href={QARI_AHMED_AZIZI_TEL} dir="ltr">{QARI_AHMED_AZIZI_PHONE}</a>
           <div className="qari-actions">
@@ -183,7 +184,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <article className="qari reveal">
         <div className="qari-video">
           <button className="vthumb" type="button" data-embed="https://www.youtube-nocookie.com/embed/sFiDyMgbhJ4?autoplay=1&rel=0" aria-label="Play Qari Abdur Rahman Al Afin recitation">
-            <img src="/images/qari-abdurrahman-thumb.jpg" alt="Qari Abdur Rahman Al Afin — Qur'an recitation video" loading="lazy" />
+            <img src={sitePath("/images/qari-abdurrahman-thumb.jpg")} alt="Qari Abdur Rahman Al Afin — Qur'an recitation video" loading="lazy" />
             <span className="vplay" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z" /></svg></span>
             <span className="vbadge">YouTube</span>
           </button>

@@ -2,6 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { I18N, LANG_ORDER } from "@/lib/i18n";
 import { DONATE_FEATURE_TRANSLATIONS } from "@/lib/feature-translations";
+import { BASE_PATH } from "@/lib/site-path";
 
 type Ctx = { lang:string; setLang:(s:string)=>void; t:(key:string)=>string; languages:typeof I18N; order:string[] };
 const Context=createContext<Ctx|null>(null);
@@ -10,7 +11,8 @@ export function I18nProvider({children,initialLang="en",translations}:{children:
  const [lang,setLangState]=useState(initialLang);
  useEffect(()=>{
   const url=new URLSearchParams(location.search).get("lang");
-  const pathLang=location.pathname.split("/")[1];
+  const localPath=BASE_PATH&&location.pathname.startsWith(BASE_PATH)?location.pathname.slice(BASE_PATH.length):location.pathname;
+  const pathLang=localPath.split("/")[1];
   const saved=localStorage.getItem("ma_lang");
   const browser=navigator.language?.split("-")[0];
   const initial=[I18N[pathLang]?pathLang:null,url,saved,browser,"en"].find(x=>x&&I18N[x])||"en";

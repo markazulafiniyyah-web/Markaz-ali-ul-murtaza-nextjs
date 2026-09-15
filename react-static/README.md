@@ -30,3 +30,11 @@ The generated site is written to `dist/`. Always set `STATIC_SITE_URL` to the st
 npm run dev
 npm run preview
 ```
+
+## GitHub Pages
+
+Pushes to `main` deploy automatically through `.github/workflows/deploy-pages.yml` to:
+
+`https://markazulafiniyyah-web.github.io/markaz-al-murtaza-react/`
+
+The workflow supplies the repository base path to Vite and the prerenderer, so assets, internal routes, localized routes, canonical URLs, hreflang, the sitemap, and client-side navigation work from the GitHub Pages project subdirectory.

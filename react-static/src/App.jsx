@@ -8,17 +8,20 @@ import { PROGRAM_PAGES } from "@/lib/program-pages";
 import OnlineQuranClasses from "@/pages/online-quran-classes";
 import OnlineHifzTajweed from "@/pages/online-hifz-tajweed-institute";
 import JamiaRiazUlJannah from "@/pages/jamia-riaz-ul-jannah";
+import { BASE_PATH } from "@/lib/site-path";
 
 export const LANGUAGE_CODES = ["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"];
 
 export function routeFromPath(pathname = "/") {
-  const parts = pathname.split("/").filter(Boolean);
+  const localPath = BASE_PATH && pathname.startsWith(BASE_PATH) ? pathname.slice(BASE_PATH.length) || "/" : pathname;
+  const parts = localPath.split("/").filter(Boolean);
   if (parts.length && LANGUAGE_CODES.includes(parts[0])) parts.shift();
   return parts[0] || "home";
 }
 
 export function languageFromPath(pathname = "/") {
-  const code = pathname.split("/").filter(Boolean)[0];
+  const localPath = BASE_PATH && pathname.startsWith(BASE_PATH) ? pathname.slice(BASE_PATH.length) || "/" : pathname;
+  const code = localPath.split("/").filter(Boolean)[0];
   return LANGUAGE_CODES.includes(code) ? code : "en";
 }
 
