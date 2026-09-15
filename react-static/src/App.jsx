@@ -9,6 +9,7 @@ import OnlineQuranClasses from "@/pages/online-quran-classes";
 import OnlineHifzTajweed from "@/pages/online-hifz-tajweed-institute";
 import JamiaRiazUlJannah from "@/pages/jamia-riaz-ul-jannah";
 import { BASE_PATH } from "@/lib/site-path";
+import Seo from "./Seo";
 
 export const LANGUAGE_CODES = ["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"];
 
@@ -36,10 +37,13 @@ function Route({ page, language }) {
   return <HomePage language={language} />;
 }
 
-export default function App({ initialPage = "home", initialLang = "en" }) {
+export default function App({ initialPage = "home", initialLang = "en", seo = {} }) {
   return (
-    <I18nProvider initialLang={initialLang}>
-      <Route page={initialPage} language={initialLang} />
-    </I18nProvider>
+    <>
+      <Seo seo={seo} language={initialLang} />
+      <I18nProvider initialLang={initialLang}>
+        <Route page={initialPage} language={initialLang} />
+      </I18nProvider>
+    </>
   );
 }

@@ -6,7 +6,7 @@ A standalone Vite/React multi-page application for Markaz Al Murtaza Al Islami &
 
 - 99 crawlable, prerendered HTML pages
 - Real paths such as `/hifz`, `/tajweed`, `/portfolio`, `/ur`, and `/ur/donate`
-- Per-page titles, descriptions, keywords, canonicals, Open Graph and Twitter metadata
+- `react-helmet-async` with SSR extraction for per-page titles, descriptions, keywords, canonicals, Open Graph and Twitter metadata
 - WebSite, EducationalOrganization and WebPage JSON-LD
 - `hreflang` alternates for 30 interface languages
 - Generated `sitemap.xml` and `robots.txt`

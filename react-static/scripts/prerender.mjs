@@ -27,14 +27,17 @@ for(const page of Object.keys(pages).filter(x=>x!=='home'))routes.push({path:`/$
 for(const lang of langs){for(const page of ['home','donate','portfolio']){const suffix=page==='home'?'':`/${page}`;routes.push({path:`/${lang}${suffix}`,output:`${lang}${suffix}/index.html`,page,lang})}}
 const template=await readFile(resolve(root,'dist/index.html'),'utf8');
 const {render}=await import(pathToFileURL(resolve(root,'.ssr/entry-server.js')).href);
-const esc=s=>s.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;').replaceAll('>','&gt;');
 for(const route of routes){
  const fallback=pages[route.page];const local=localized[route.lang]?.[route.page];const title=local?.[0]||fallback.title;const description=local?.[1]||fallback.description;const canonical=`${SITE}${route.path==='/'?'':route.path}`;
- const alternates=['home','donate','portfolio'].includes(route.page)?langs.map(code=>`<link rel="alternate" hreflang="${code}" href="${SITE}/${code}${route.page==='home'?'':`/${route.page}`}"/>`).join('')+`<link rel="alternate" hreflang="x-default" href="${SITE}/en${route.page==='home'?'':`/${route.page}`}"/>`:'';
+ const alternateLinks=['home','donate','portfolio'].includes(route.page)?[
+  ...langs.map(code=>({language:code,href:`${SITE}/${code}${route.page==='home'?'':`/${route.page}`}`})),
+  {language:'x-default',href:`${SITE}/en${route.page==='home'?'':`/${route.page}`}`}
+ ]:[];
  const schema={"@context":"https://schema.org","@graph":[{"@type":"WebSite",url:SITE,name:BRAND},{"@type":"EducationalOrganization",name:BRAND,url:SITE,logo:`${SITE}/images/institute-logo.png`},{"@type":"WebPage",url:canonical,name:title,description,inLanguage:route.lang}]};
- const head=`<meta name="description" content="${esc(description)}"/><meta name="keywords" content="${esc(fallback.keywords)}"/><meta name="robots" content="index, follow"/><link rel="canonical" href="${canonical}"/>${alternates}<meta property="og:type" content="website"/><meta property="og:title" content="${esc(title)}"/><meta property="og:description" content="${esc(description)}"/><meta property="og:url" content="${canonical}"/><meta property="og:site_name" content="${esc(BRAND)}"/><meta property="og:image" content="${SITE}/images/institute-wide-front.webp"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="${esc(title)}"/><meta name="twitter:description" content="${esc(description)}"/><meta name="twitter:image" content="${SITE}/images/institute-wide-front.webp"/><script type="application/ld+json">${JSON.stringify(schema).replaceAll('<','\\u003c')}</script>`;
- const props={initialPage:route.page,initialLang:route.lang};
- let html=template.replace('<html lang="en">',`<html lang="${route.lang}" dir="${rtl.has(route.lang)?'rtl':'ltr'}">`).replace(/<title>.*?<\/title>/,`<title>${esc(title)}</title>`).replace('<!--seo-head-->',head).replace('<!--app-html-->',render(props)).replace('<!--initial-state-->',`<script>window.__PRERENDER__=${JSON.stringify(props).replaceAll('<','\\u003c')}</script>`);
+ const seo={title,description,keywords:fallback.keywords,canonical,image:`${SITE}/images/institute-wide-front.webp`,alternates:alternateLinks,schema,rtl:rtl.has(route.lang)};
+ const props={initialPage:route.page,initialLang:route.lang,seo};
+ const rendered=render(props);
+ let html=template.replace('<html lang="en">',`<html lang="${route.lang}" dir="${rtl.has(route.lang)?'rtl':'ltr'}">`).replace(/<title>.*?<\/title>/,'').replace('<!--seo-head-->',rendered.head).replace('<!--app-html-->',rendered.html).replace('<!--initial-state-->',`<script>window.__PRERENDER__=${JSON.stringify(props).replaceAll('<','\\u003c')}</script>`);
  const out=resolve(root,'dist',route.output);await mkdir(dirname(out),{recursive:true});await writeFile(out,html);if(route.path!=='/'){const extensionAlias=resolve(root,'dist',`${route.path.slice(1)}.html`);await mkdir(dirname(extensionAlias),{recursive:true});await writeFile(extensionAlias,html);}
 }
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(r=>`<url><loc>${SITE}${r.path==='/'?'':r.path}</loc></url>`).join('')}</urlset>`;

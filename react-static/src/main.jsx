@@ -1,5 +1,6 @@
 import React from 'react';
 import {createRoot,hydrateRoot} from 'react-dom/client';
+import {HelmetProvider} from 'react-helmet-async';
 import App,{languageFromPath,routeFromPath} from './App.jsx';
 import '@fontsource/amiri-quran/400.css';
 import '@fontsource/noto-naskh-arabic/400.css';
@@ -9,5 +10,5 @@ import '@fontsource/noto-nastaliq-urdu/700.css';
 import './styles.css';
 const root=document.getElementById('root');
 const initial=window.__PRERENDER__||{initialPage:routeFromPath(location.pathname),initialLang:languageFromPath(location.pathname)};
-const app=<React.StrictMode><App {...initial}/></React.StrictMode>;
+const app=<React.StrictMode><HelmetProvider><App {...initial}/></HelmetProvider></React.StrictMode>;
 if(window.__PRERENDER__)hydrateRoot(root,app);else createRoot(root).render(app);
