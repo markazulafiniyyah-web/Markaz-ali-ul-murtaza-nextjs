@@ -1,9 +1,16 @@
 {
   "name":"markaz-static-react",
   "private":true,
-  "version":"1.0.0",
+  "version":"1.1.0",
   "type":"module",
-  "scripts":{"dev":"vite --host 0.0.0.0","build":"vite build","preview":"vite preview --host 0.0.0.0"},
+  "scripts":{
+    "dev":"vite --host 0.0.0.0",
+    "build:client":"vite build",
+    "build:ssr":"vite build --ssr src/entry-server.jsx --outDir .ssr",
+    "prerender":"node scripts/prerender.mjs",
+    "build":"npm run build:client && npm run build:ssr && npm run prerender",
+    "preview":"vite preview --host 0.0.0.0"
+  },
   "dependencies":{"@vitejs/plugin-react":"latest","vite":"latest","typescript":"latest","react":"^19.3.0","react-dom":"^19.3.0"},
   "devDependencies":{}
 }
