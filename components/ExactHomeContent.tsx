@@ -53,6 +53,8 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <figure className="institute-visual-card reveal"><img src="/images/institute-wide-community.webp" alt="Evening 3D visualization of the Qur'an learning institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
     </div>
   </section>
+  {/* ================= MISSION / CONTENT MARKETING ================= */}
+  {lang==="en"&&<section className="mission-story" aria-labelledby="mission-title"><div className="mission-quote reveal"><p className="kicker gold">Our guiding purpose</p><blockquote>“We guide learners toward the straight path, where the night becomes like day.”</blockquote></div><div className="mission-copy reveal"><p className="kicker">Quran and Sunnah</p><h2 id="mission-title">Where a noble intention becomes a lived practice.</h2><p>Markaz Al Murtaza Al Islami &amp; Safia Islamic Institute helps learners move from uncertainty to confident Quran recitation through patient, personal guidance. We focus on fine-tuning pronunciation, applying Tajweed in real recitation and building a dependable routine for Nazra and Hifz.</p><p>With 16 years of experience, we are carrying an Urdu-rooted teaching mission beyond physical walls so families can learn online wherever they live—while remembering that every success is only through the mercy and help of Allah.</p><a className="link-more" href="/blog/from-recitation-to-a-life-guided-by-quran">Read our learning mission →</a></div></section>}
   {/* ================= PROGRAMS ================= */}
   <section className="programs" id="programs">
     <div className="section-head reveal">
