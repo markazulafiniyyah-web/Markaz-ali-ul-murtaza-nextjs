@@ -21,6 +21,7 @@ export default function Seo({ seo = {}, language = "en" }) {
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
+      <meta name="google-site-verification" content="_q807GXRP-gCiqkhvucD9BQuZj-JY9z3kDJ0acxWjWE" />
       <link rel="canonical" href={canonical} />
       {alternates.map(({ language: code, href }) => (
         <link rel="alternate" hrefLang={code} href={href} key={`${code}-${href}`} />
