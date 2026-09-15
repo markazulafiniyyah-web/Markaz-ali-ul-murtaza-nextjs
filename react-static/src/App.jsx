@@ -3,6 +3,7 @@ import { I18nProvider } from "@/components/I18nProvider";
 import HomePage from "@/components/HomePage";
 import DonatePage from "@/components/DonatePage";
 import PortfolioPage from "@/components/PortfolioPage";
+import TermsPage from "@/components/TermsPage";
 import ProgramDetailPage from "@/components/ProgramDetailPage";
 import { PROGRAM_PAGES } from "@/lib/program-pages";
 import OnlineQuranClasses from "@/pages/online-quran-classes";
@@ -30,6 +31,7 @@ function Route({ page, language }) {
   if (page === "home") return <HomePage language={language} />;
   if (page === "donate") return <DonatePage language={language} />;
   if (page === "portfolio") return <PortfolioPage language={language} />;
+  if (page === "terms") return <TermsPage />;
   if (PROGRAM_PAGES[page]) return <ProgramDetailPage program={PROGRAM_PAGES[page]} />;
   if (page === "online-quran-classes") return <OnlineQuranClasses />;
   if (page === "online-hifz-tajweed-institute") return <OnlineHifzTajweed />;
