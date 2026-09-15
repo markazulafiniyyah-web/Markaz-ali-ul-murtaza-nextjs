@@ -40,6 +40,19 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
     <p className="verse-ar" lang="ar" dir="rtl">﴿ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ﴾</p>
     <p className="verse-trans"><span data-i18n="verse_trans">{t("verse_trans")}</span> <span className="verse-ref" data-i18n="verse_ref">{t("verse_ref")}</span></p>
   </section>
+  {/* ================= INSTITUTE VISUALS ================= */}
+  <section className="institute-visuals" aria-labelledby="institute-visuals-title">
+    <div className="section-head reveal">
+      <p className="kicker">{t("visual_kicker")}</p>
+      <h2 id="institute-visuals-title">{t("visual_title")}</h2>
+      <p className="section-sub">{t("visual_sub")}</p>
+    </div>
+    <div className="institute-visual-grid">
+      <figure className="institute-visual-card visual-wide reveal"><img src="/images/institute-wide-front.webp" alt="Wide 3D architectural visualization of the Qur'an institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-entrance.webp" alt="3D visualization of the institute entrance and arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-community.webp" alt="Evening 3D visualization of the Qur'an learning institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
+    </div>
+  </section>
   {/* ================= PROGRAMS ================= */}
   <section className="programs" id="programs">
     <div className="section-head reveal">

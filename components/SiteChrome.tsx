@@ -6,7 +6,7 @@ import { HonorificText } from "./SmallHonorific";
 import { ENROLL_WHATSAPP_URL } from "@/lib/contact";
 
 const I18NPath=(code:string)=>Boolean(code&&["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"].includes(code));
-export function Logo(){return <svg className="brand-mark" viewBox="0 0 64 64" aria-hidden><rect width="64" height="64" rx="14" fill="#01411C"/><path d="M42 12a20 20 0 1 0 10.5 37A22 22 0 1 1 42 12z" fill="#f0c75e"/><circle cx="45" cy="20" r="3" fill="#f0c75e"/></svg>}
+export function Logo(){return <img className="brand-mark" src="/images/institute-logo.png" width="640" height="640" alt="" aria-hidden="true"/>}
 export function Header({dark=false,active="",languageCodes,forcedLanguage}:{dark?:boolean;active?:string;languageCodes?:readonly string[];forcedLanguage?:string}){
  const {t,lang,setLang,languages,order}=useI18n(); const available=languageCodes??order; const displayLang=forcedLanguage&&available.includes(forcedLanguage)?forcedLanguage:available.includes(lang)?lang:"en"; const tr=t; const prefix=forcedLanguage?`/${forcedLanguage}`:""; const local=(path:string)=>`${prefix}${path}`; const chooseLanguage=(code:string)=>{if(forcedLanguage){const parts=location.pathname.split("/");if(I18NPath(parts[1]))parts[1]=code;else parts.splice(1,0,code);location.href=parts.join("/")+location.search+location.hash}else setLang(code)}; const [menu,setMenu]=useState(false),[picker,setPicker]=useState(false),[q,setQ]=useState(""),[scrolled,setScrolled]=useState(false);
  useEffect(()=>{const f=()=>setScrolled(scrollY>8);addEventListener("scroll",f,{passive:true});return()=>removeEventListener("scroll",f)},[]);
