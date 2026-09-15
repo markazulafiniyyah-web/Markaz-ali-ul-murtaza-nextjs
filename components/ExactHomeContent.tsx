@@ -48,9 +48,9 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <p className="section-sub">{t("visual_sub")}</p>
     </div>
     <div className="institute-visual-grid">
-      <figure className="institute-visual-card visual-wide reveal"><img src="/images/institute-wide-front.webp" alt="Wide 3D architectural visualization of the Qur'an institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
-      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-entrance.webp" alt="3D visualization of the institute entrance and arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
-      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-community.webp" alt="Evening 3D visualization of the Qur'an learning institute" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card visual-wide reveal"><img src="/images/institute-wide-front.webp" alt="3D architectural visualization based on the institute’s real arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-entrance.webp" alt="3D architectural visualization based on the institute’s real entrance" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src="/images/institute-wide-community.webp" alt="3D architectural visualization based on the institute’s real learning building" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
     </div>
   </section>
   {/* ================= MISSION / CONTENT MARKETING ================= */}
