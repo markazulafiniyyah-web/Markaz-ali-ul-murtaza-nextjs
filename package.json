@@ -26,11 +26,14 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.15.13",
-    "@opennextjs/cloudflare": "1.17.1",
+    "@opennextjs/cloudflare": "1.20.6",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "typescript": "^5.7.2",
-    "wrangler": "4.80.0"
+    "wrangler": "4.132.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   }
 }

@@ -10,6 +10,7 @@ In **Workers & Pages → markazalmurtaza → Settings → Builds**, use:
 - **Deploy command:** `npx opennextjs-cloudflare deploy`
 - **Non-production branch deploy command:** `npx opennextjs-cloudflare upload`
 - **Root directory:** `/` (repository root)
+- **Node.js version:** `22`
 
 Alternatively, `npm run deploy` can be used as the deploy command. It runs the OpenNext build immediately before deployment and is safe when no separate build command is configured.
 
@@ -29,3 +30,5 @@ The Worker name and self-reference must remain identical in `wrangler.jsonc`:
 name = markazalmurtaza
 WORKER_SELF_REFERENCE.service = markazalmurtaza
 ```
+
+The adapter and Wrangler versions are pinned because Next.js 16.3 requires the current OpenNext manifest patches. Older adapter releases fail at runtime while loading `prefetch-hints.json`.
