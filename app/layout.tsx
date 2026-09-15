@@ -13,9 +13,9 @@ const SITE_URL="https://markazulmurtaza.vercel.app";
 export const metadata:Metadata={
  metadataBase:new URL(SITE_URL),
  applicationName:SITE_NAME,
- title:`Markaz Al Murtaza (may Allah be pleased with him) Al Islami & Safia Islamic Institute — Online Qur'anic Institute`,
+ title:"Online Quran Classes | Markaz Al Murtaza Al Islami",
  description:"Learn Qur'an online with one-to-one Hifz, Nazra and Tajweed classes taught by experienced Qaris for children and adults worldwide.",
- keywords:["Markaz Al Murtaza Al Islami","Safia Islamic Institute","مرکز المرتضٰی الاسلامی","صفیہ اسلامک انسٹیٹیوٹ","online Quran teacher","online Quran classes","Quran institute online","Hifz teacher online","online Hifz classes","Nazra Quran classes online","online Tajweed teacher","Tajweed classes online","Quran classes for kids","Quran classes for adults","Noorani Qaida online","learn Quran online","Jamia Riaz ul Jannah","Masjid Riaz ul Jannah","Riaz ul Jannah Lahore","Qari Ahmed Azizi","Quran teacher Lahore","Quran institute Lahore"],
+ keywords:["Markaz Al Murtaza Al Islami","Safia Islamic Institute","مرکز المرتضٰی الاسلامی","صفیہ اسلامک انسٹیٹیوٹ","online Quran teacher","online Quran classes","learn Quran online","online Quran academy","Quran tutor online","one to one Quran classes","Quran institute online","Hifz teacher online","online Hifz classes","Nazra Quran classes online","online Tajweed teacher","Tajweed classes online","Quran classes for kids","Quran classes for adults","Noorani Qaida online","Jamia Riaz ul Jannah","Masjid Riaz ul Jannah","Riaz ul Jannah Lahore","Qari Ahmed Azizi","Quran teacher Lahore","Quran institute Lahore"],
  openGraph:{siteName:SITE_NAME,type:"website",url:SITE_URL},
  icons:{icon:[{url:"/favicon.ico",type:"image/x-icon",sizes:"48x48"},{url:"/icon.svg",type:"image/svg+xml",sizes:"any"}],shortcut:"/favicon.ico",apple:"/apple-icon.png"},
  verification:{google:"jEj58WOo1-4SvtQ5wwg3d-L3JJWoKwlYkrIDHbEidkE"}

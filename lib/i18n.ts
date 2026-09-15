@@ -9,8 +9,8 @@ export const I18N: Record<string, Language> = {
 
 /* ---------------- ENGLISH (full) ---------------- */
 en: { name:"English", en:"English", flag:"🌍", region:"Worldwide", rtl:false, t:{
-  meta_title:"Markaz Al Murtaza Al Islami & Safia Islamic Institute — Online Qur'anic Institute | Hifz, Nazra & Tajweed",
-  meta_desc:"Markaz Al Murtaza Al Islami & Safia Islamic Institute is an online Islamic institute based in Lashari, Okara, Punjab, Pakistan — one-to-one classes in Hifz, Nazra and Tajweed, taught by certified scholars for students worldwide.",
+  meta_title:"Online Quran Classes | Markaz Al Murtaza Al Islami",
+  meta_desc:"Learn Quran online in one-to-one Hifz, Nazra and Tajweed classes for kids and adults. Flexible lessons with experienced Quran teachers at Safia Islamic Institute.",
   nav_programs:"Programs", nav_about:"Why Us", nav_method:"How It Works", nav_faq:"FAQ", nav_contact:"Contact", nav_enroll:"Enroll Now",
   hero_badge:"Online Qur'anic Institute · Lashari, Okara, Pakistan",
   hero_title:"Markaz Al Murtaza Al Islami & Safia Islamic Institute",
@@ -375,42 +375,13 @@ ko: { name:"한국어", en:"Korean", flag:"🇰🇷", region:"대한민국", rtl
 /* Display order in the language picker */
 export const LANG_ORDER = ["en","ar","ur","fa","ps","sd","ks","pa","tr","az","kk","uz","id","ms","bn","hi","ta","so","sw","ha","am","fr","es","de","it","pt","ru","zh","ja","ko"];
 
-/* The honorific belongs to Sayyiduna Ali al-Murtaza (may Allah be pleased with him).
-   Keep it attached to the institute name in every available interface language. */
-export const BRAND_NAMES: Record<string,string> = {
-  en:"Markaz Al Murtaza (may Allah be pleased with him) Al Islami & Safia Islamic Institute",
-  ar:"مرکز المرتضٰی رضي الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
-  ur:"مرکز المرتضٰی رضی اللہ عنہ الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
-  fa:"مرکز المرتضٰی رضی الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
-  ps:"مرکز المرتضٰی رضي الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
-  sd:"مرکز المرتضٰی رضي الله عنه الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
-  ks:"مرکز المرتضٰی رضی اللہ عنہ الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
-  pa:"Markaz Al Murtaza (ਅੱਲਾਹ ਉਨ੍ਹਾਂ ਤੋਂ ਰਾਜ਼ੀ ਹੋਵੇ) Al Islami & Safia Islamic Institute",
-  tr:"Markaz Al Murtaza (Allah ondan razı olsun) Al Islami & Safia Islamic Institute",
-  az:"Markaz Al Murtaza (Allah ondan razı olsun) Al Islami & Safia Islamic Institute",
-  kk:"Markaz Al Murtaza (Алла оған разы болсын) Al Islami & Safia Islamic Institute",
-  uz:"Markaz Al Murtaza (Alloh undan rozi bo‘lsin) Al Islami & Safia Islamic Institute",
-  id:"Markaz Al Murtaza (semoga Allah meridhainya) Al Islami & Safia Islamic Institute",
-  ms:"Markaz Al Murtaza (semoga Allah meredainya) Al Islami & Safia Islamic Institute",
-  bn:"Markaz Al Murtaza (আল্লাহ তাঁর প্রতি সন্তুষ্ট হোন) Al Islami & Safia Islamic Institute",
-  hi:"Markaz Al Murtaza (अल्लाह उनसे राज़ी हो) Al Islami & Safia Islamic Institute",
-  ta:"Markaz Al Murtaza (அல்லாஹ் அவரைப் பொருந்திக்கொள்வானாக) Al Islami & Safia Islamic Institute",
-  so:"Markaz Al Murtaza (Alle haka raalli noqdo) Al Islami & Safia Islamic Institute",
-  sw:"Markaz Al Murtaza (Mwenyezi Mungu amridhie) Al Islami & Safia Islamic Institute",
-  ha:"Markaz Al Murtaza (Allah Ya yarda da shi) Al Islami & Safia Islamic Institute",
-  am:"Markaz Al Murtaza (አላህ በእርሱ ይደሰት) Al Islami & Safia Islamic Institute",
-  fr:"Markaz Al Murtaza (qu’Allah l’agrée) Al Islami & Safia Islamic Institute",
-  es:"Markaz Al Murtaza (que Allah esté complacido con él) Al Islami & Safia Islamic Institute",
-  de:"Markaz Al Murtaza (möge Allah mit ihm zufrieden sein) Al Islami & Safia Islamic Institute",
-  it:"Markaz Al Murtaza (che Allah sia soddisfatto di lui) Al Islami & Safia Islamic Institute",
-  pt:"Markaz Al Murtaza (que Allah esteja satisfeito com ele) Al Islami & Safia Islamic Institute",
-  ru:"Markaz Al Murtaza (да будет доволен им Аллах) Al Islami & Safia Islamic Institute",
-  zh:"Markaz Al Murtaza（愿真主喜悦他）Al Islami & Safia Islamic Institute",
-  ja:"Markaz Al Murtaza（アッラーが彼にご満悦でありますように）Al Islami & Safia Islamic Institute",
-  ko:"Markaz Al Murtaza (알라께서 그를 기뻐하시기를) Al Islami & Safia Islamic Institute"
-};
+export const BRAND_NAMES: Record<string,string> = Object.fromEntries(
+  LANG_ORDER.map(code=>[code,["ar","ur","fa","ps","sd","ks"].includes(code)
+    ? "مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ"
+    : "Markaz Al Murtaza Al Islami & Safia Islamic Institute"])
+);
 
-/* Base spellings are expanded at runtime with the localized honorific. */
+/* Keep the complete combined brand consistent in every translated sentence. */
 const BASE_BRAND: Record<string,string> = {
   en:"Markaz Al Murtaza Al Islami & Safia Islamic Institute",
   ar:"مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",ur:"مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",fa:"مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",ps:"مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",sd:"مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",ks:"مرکز المرتضٰی الاسلامی و صفیہ اسلامک انسٹیٹیوٹ",
