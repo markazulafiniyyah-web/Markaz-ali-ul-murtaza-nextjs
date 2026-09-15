@@ -35,6 +35,6 @@ npm run preview
 
 The production site is published from the `gh-pages` branch at:
 
-`https://markazulafiniyyah-web.github.io/markaz-al-murtaza-react/`
+`https://markazulafiniyyah-web.github.io/`
 
-The Pages build supplies the repository base path to Vite and the prerenderer, so assets, internal routes, localized routes, canonical URLs, hreflang, the sitemap, and client-side navigation work from the GitHub Pages project subdirectory.
+The Pages build supplies the repository base path to Vite and the prerenderer, so assets, internal routes, localized routes, canonical URLs, hreflang, the sitemap, and client-side navigation work from the GitHub Pages root domain.
