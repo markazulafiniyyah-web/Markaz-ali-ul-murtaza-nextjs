@@ -37,7 +37,17 @@ for(const route of routes){
  const seo={title,description,keywords:fallback.keywords,canonical,image:`${SITE}/images/institute-wide-front.webp`,alternates:alternateLinks,schema,rtl:rtl.has(route.lang)};
  const props={initialPage:route.page,initialLang:route.lang,seo};
  const rendered=render(props);
- let html=template.replace('<html lang="en">',`<html lang="${route.lang}" dir="${rtl.has(route.lang)?'rtl':'ltr'}">`).replace(/<title>.*?<\/title>/,'').replace('<!--seo-head-->',rendered.head).replace('<!--app-html-->',rendered.html).replace('<!--initial-state-->',`<script>window.__PRERENDER__=${JSON.stringify(props).replaceAll('<','\\u003c')}</script>`);
+ // React 19 renders document-metadata elements from react-helmet-async inline when
+ // renderToString is used. Extract those Helmet-managed elements into <head> so
+ // crawlers and verification services see standards-compliant document metadata.
+ const extracted=[];
+ let appHtml=rendered.html
+  .replace(/<title>[^<]*<\/title>/g,tag=>{extracted.push(tag);return''})
+  .replace(/<meta\s[^>]*\/>/g,tag=>{extracted.push(tag);return''})
+  .replace(/<link\s[^>]*rel="(?:canonical|alternate)"[^>]*\/>/g,tag=>{extracted.push(tag);return''})
+  .replace(/<script\s+type="application\/ld\+json">[\s\S]*?<\/script>/g,tag=>{extracted.push(tag);return''});
+ const helmetHead=(rendered.head||'')+extracted.join('');
+ let html=template.replace('<html lang="en">',`<html lang="${route.lang}" dir="${rtl.has(route.lang)?'rtl':'ltr'}">`).replace(/<title>.*?<\/title>/,'').replace('<!--seo-head-->',helmetHead).replace('<!--app-html-->',appHtml).replace('<!--initial-state-->',`<script>window.__PRERENDER__=${JSON.stringify(props).replaceAll('<','\\u003c')}</script>`);
  const out=resolve(root,'dist',route.output);await mkdir(dirname(out),{recursive:true});await writeFile(out,html);if(route.path!=='/'){const extensionAlias=resolve(root,'dist',`${route.path.slice(1)}.html`);await mkdir(dirname(extensionAlias),{recursive:true});await writeFile(extensionAlias,html);}
 }
 const sitemap=`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${routes.map(r=>`<url><loc>${SITE}${r.path==='/'?'':r.path}</loc></url>`).join('')}</urlset>`;
