@@ -1,6 +1,11 @@
 import React from 'react';
 import {createRoot,hydrateRoot} from 'react-dom/client';
 import App,{languageFromPath,routeFromPath} from './App.jsx';
+import '@fontsource/amiri-quran/400.css';
+import '@fontsource/noto-naskh-arabic/400.css';
+import '@fontsource/noto-naskh-arabic/700.css';
+import '@fontsource/noto-nastaliq-urdu/400.css';
+import '@fontsource/noto-nastaliq-urdu/700.css';
 import './styles.css';
 const root=document.getElementById('root');
 const initial=window.__PRERENDER__||{initialPage:routeFromPath(location.pathname),initialLang:languageFromPath(location.pathname)};

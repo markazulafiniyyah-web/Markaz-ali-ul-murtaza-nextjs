@@ -10,7 +10,9 @@ A standalone Vite/React multi-page application for Markaz Al Murtaza Al Islami &
 - WebSite, EducationalOrganization and WebPage JSON-LD
 - `hreflang` alternates for 30 interface languages
 - Generated `sitemap.xml` and `robots.txt`
-- Responsive landing page, programs, portfolio, donation details and SEO course pages
+- The same responsive Apple-style UI, components, artwork, typography and interactions as the Next.js application
+- Landing page, programs, portfolio, donation details and SEO course pages
+- Locally bundled Qur’anic Arabic and authentic Urdu typefaces
 - 30-language selector with English fallback
 
 The Hadith library and Next.js blog are intentionally excluded.
