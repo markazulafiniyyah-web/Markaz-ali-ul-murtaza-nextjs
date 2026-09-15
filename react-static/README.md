@@ -33,8 +33,8 @@ npm run preview
 
 ## GitHub Pages
 
-Pushes to `main` deploy automatically through `.github/workflows/deploy-pages.yml` to:
+The production site is published from the `gh-pages` branch at:
 
 `https://markazulafiniyyah-web.github.io/markaz-al-murtaza-react/`
 
-The workflow supplies the repository base path to Vite and the prerenderer, so assets, internal routes, localized routes, canonical URLs, hreflang, the sitemap, and client-side navigation work from the GitHub Pages project subdirectory.
+The Pages build supplies the repository base path to Vite and the prerenderer, so assets, internal routes, localized routes, canonical URLs, hreflang, the sitemap, and client-side navigation work from the GitHub Pages project subdirectory.
