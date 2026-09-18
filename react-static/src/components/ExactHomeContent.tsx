@@ -8,7 +8,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
 <main id="main" onClick={handleClick}>
   {/* ================= HERO ================= */}
   <section className="hero" id="home">
-    <div className="hero-inner reveal">
+    <div className="hero-inner">
       <p className="hero-badge"><span className="dot" /><span data-i18n="hero_badge">{t("hero_badge")}</span></p>
       <h1 data-i18n="hero_title"><HonorificText text={t("hero_title")} language={lang}/></h1>
       <p className="hero-sub" data-i18n="hero_sub">{t("hero_sub")}</p>
@@ -17,7 +17,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
         <a href="#programs" className="btn btn-ghost link-more" data-i18n="hero_cta2">{t("hero_cta2")}</a>
       </div>
     </div>
-    <div className="hero-art reveal">
+    <div className="hero-art">
       <svg viewBox="0 0 1200 560" role="img" aria-label="Al-Qur'an al-Karim — Hifz, Nazra and Tajweed">
         <defs>
           <linearGradient id="hAbg" x1={0} y1={0} x2={1} y2={1}><stop offset={0} stopColor="#01411C" /><stop offset=".55" stopColor="#0B6E4F" /><stop offset={1} stopColor="#0E7C86" /></linearGradient>
@@ -49,9 +49,9 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
       <p className="section-sub">{t("visual_sub")}</p>
     </div>
     <div className="institute-visual-grid">
-      <figure className="institute-visual-card visual-wide reveal"><img src={sitePath("/images/institute-wide-front.webp")} alt="3D architectural visualization based on the institute’s real arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
-      <figure className="institute-visual-card reveal"><img src={sitePath("/images/institute-wide-entrance.webp")} alt="3D architectural visualization based on the institute’s real entrance" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
-      <figure className="institute-visual-card reveal"><img src={sitePath("/images/institute-wide-community.webp")} alt="3D architectural visualization based on the institute’s real learning building" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card visual-wide reveal"><img src={sitePath("/images/institute-wide-front.webp")} srcSet={`${sitePath("/images/institute-wide-front-720.webp")} 720w, ${sitePath("/images/institute-wide-front.webp")} 1376w`} sizes="(max-width: 760px) 100vw, 100vw" alt="3D architectural visualization based on the institute’s real arched facade" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual1_title")}</h3><p>{t("visual1_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src={sitePath("/images/institute-wide-entrance.webp")} srcSet={`${sitePath("/images/institute-wide-entrance-720.webp")} 720w, ${sitePath("/images/institute-wide-entrance.webp")} 1376w`} sizes="(max-width: 760px) 100vw, 50vw" alt="3D architectural visualization based on the institute’s real entrance" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual2_title")}</h3><p>{t("visual2_desc")}</p></figcaption></figure>
+      <figure className="institute-visual-card reveal"><img src={sitePath("/images/institute-wide-community.webp")} srcSet={`${sitePath("/images/institute-wide-community-720.webp")} 720w, ${sitePath("/images/institute-wide-community.webp")} 1376w`} sizes="(max-width: 760px) 100vw, 50vw" alt="3D architectural visualization based on the institute’s real learning building" width="1376" height="768" loading="lazy" decoding="async"/><figcaption><span>{t("visual_tag")}</span><h3>{t("visual3_title")}</h3><p>{t("visual3_desc")}</p></figcaption></figure>
     </div>
   </section>
   {/* ================= MISSION / CONTENT MARKETING ================= */}
@@ -177,7 +177,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <a className="qari-phone" href={QARI_AHMED_AZIZI_TEL} dir="ltr">{QARI_AHMED_AZIZI_PHONE}</a>
           <div className="qari-actions">
             <a className="btn btn-call" href={QARI_AHMED_AZIZI_TEL} data-i18n="call_label">{t("call_label")}</a>
-            <a className="btn btn-wa" href={QARI_AHMED_AZIZI_WHATSAPP} target="_blank" rel="noopener">WhatsApp</a>
+            <a className="btn btn-wa" href={QARI_AHMED_AZIZI_WHATSAPP} target="_blank" rel="noopener">WhatsApp Qari Ahmed Azizi</a>
           </div>
         </div>
       </article>
@@ -196,7 +196,7 @@ export default function ExactHomeContent(){const {t,lang}=useI18n();useEffect(()
           <a className="qari-phone" href="tel:+923168724692" dir="ltr">+92 316 8724692</a>
           <div className="qari-actions">
             <a className="btn btn-call" href="tel:+923168724692" data-i18n="call_label">{t("call_label")}</a>
-            <a className="btn btn-wa" href="https://wa.me/923168724692" target="_blank" rel="noopener">WhatsApp</a>
+            <a className="btn btn-wa" href="https://wa.me/923168724692" target="_blank" rel="noopener">WhatsApp Qari Abdur Rahman</a>
           </div>
         </div>
       </article>

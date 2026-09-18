@@ -6,7 +6,7 @@
   --bg-alt:#f5f5f7;
   --text:#1d1d1f;
   --text-2:#6e6e73;
-  --text-3:#86868b;
+  --text-3:#626269;
   --link:#0066cc;
   --accent:#0071e3;
   --accent-hover:#0077ed;
@@ -123,7 +123,7 @@ html[dir="rtl"] .link-more::after{content:" ‹"}
 .lang-panel.open{display:flex;animation:pop .25s cubic-bezier(.16,1,.3,1)}
 @keyframes pop{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
 .lang-panel-head{display:flex;align-items:center;justify-content:space-between}
-.lang-panel-head h3{font-size:16px}
+.lang-panel-title{font-size:16px;font-weight:700;color:var(--text)}
 .lang-close{font-size:24px;line-height:1;color:var(--text-2);width:30px;height:30px;border-radius:50%}
 .lang-close:hover{background:var(--bg-alt)}
 .lang-chip{
@@ -292,15 +292,14 @@ html[dir="rtl"] .kicker{letter-spacing:0}
 }
 .footer .brand{margin-bottom:14px}
 .footer-brand p{line-height:1.6;max-width:320px}
-.footer h4{font-size:13px;color:var(--text);margin-bottom:12px;font-weight:600}
+.footer-heading{font-size:13px;color:var(--text);margin-bottom:12px;font-weight:600;letter-spacing:0;line-height:1.5}
 .footer nav a,.footer > .footer-grid div > a{display:block;padding:4.5px 0;color:var(--text-2)}
 .footer nav a:hover,.footer-grid div > a:hover{color:var(--text)}
 .footer-addr{padding-top:6px}
 .footer-bottom{max-width:1080px;margin:0 auto;padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--text-3)}
 
 /* ---------------- reveal animation ---------------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
-.reveal.in{opacity:1;transform:none}
+.reveal{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none;transition:none}
@@ -827,3 +826,5 @@ svg,video,iframe{max-width:100%}
 .terms-contact{margin-top:clamp(70px,9vw,110px);padding:clamp(28px,5vw,48px);border-radius:26px;color:#fff;background:linear-gradient(145deg,#032217,#015128)}.terms-contact h2{margin-top:8px;color:#fff;font-size:clamp(30px,4.5vw,46px)}.terms-contact>p:not(.kicker){max-width:640px;margin:12px 0 24px;color:rgba(255,255,255,.78);line-height:1.7}.terms-contact>div{display:flex;flex-wrap:wrap;gap:12px}.terms-note{margin:24px 4px 0;color:var(--text-3);font-size:13px;line-height:1.65}.terms-home-link{display:inline-block;margin-top:25px;color:var(--green);font-weight:700}.footer-legal{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.footer-legal a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.24);text-underline-offset:4px}
 @media(max-width:800px){.terms-shell{grid-template-columns:1fr}.terms-index{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.terms-index .kicker{grid-column:1/-1}.policy-highlight-grid{grid-template-columns:1fr}}
 @media(max-width:520px){.terms-shell{padding-inline:14px}.terms-index{grid-template-columns:1fr}.terminology dl>div{grid-template-columns:1fr;gap:7px;padding:20px}.terms-detail p{font-size:17px}.terms-contact>div .btn{width:100%;justify-content:center}.terms-meta{display:grid}.terms-meta span{text-align:center}}
+
+@media(max-width:760px){.mission-quote{background-image:linear-gradient(180deg,rgba(1,65,28,.08),rgba(1,32,20,.92)),url('/images/institute-wide-entrance-720.webp')}}

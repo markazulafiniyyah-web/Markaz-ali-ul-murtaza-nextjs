@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
 import { I18nProvider } from "@/components/I18nProvider";
 
 const SITE_NAME="Markaz Al Murtaza Al Islami & Safia Islamic Institute";
-const SITE_URL="https://markazulmurtaza.vercel.app";
+const SITE_URL="https://markazalmurtaza.markazulafiniyyah.workers.dev";
 export const metadata:Metadata={
  metadataBase:new URL(SITE_URL),
  applicationName:SITE_NAME,
